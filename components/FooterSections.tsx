@@ -42,12 +42,12 @@ export function SiteFooter() {
 
       <nav aria-label="Footer products">
         <h3>Products</h3>
-        <a href="/#products">Aluminum Pergola</a>
-        <a href="/#products">Metal Shed</a>
-        <a href="/#products">Raised Garden Bed</a>
-        <a href="/#products">Greenhouse</a>
-        <a href="/#products">Carport</a>
-        <a href="/#products">View All Products</a>
+        <a href="/products?category=aluminum-pergola">Aluminum Pergola</a>
+        <a href="/products?category=metal-shed">Metal Shed</a>
+        <a href="/products?category=raised-garden-bed">Raised Garden Bed</a>
+        <a href="/products?category=greenhouse">Greenhouse</a>
+        <a href="/products?category=carport">Carport</a>
+        <a href="/products">View All Products</a>
       </nav>
 
       <nav aria-label="Footer solutions">

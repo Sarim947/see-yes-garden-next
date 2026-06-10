@@ -9,15 +9,20 @@ import {
   testimonials,
 } from "@/data/products";
 import HeroCarousel from "@/components/HeroCarousel";
+import SiteHeader from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/FooterSections";
+import { categorySlug } from "@/data/productsCatalog";
 
-const navItems = [
-  ["HOME", "/"],
-  ["PRODUCTS", "#products"],
-  ["ABOUT", "#about"],
-  ["NEWS", "#projects"],
-  ["SUPPORT", "#process"],
-  ["CONTACT US", "/contact"],
-];
+const homeCategoryMap: Record<string, string> = {
+  "Raised Garden Beds": "Raised Garden Bed",
+  "Metal Privacy Screen": "Metal Privacy Screen",
+  Pergolas: "Aluminum Pergola",
+  "Garden Sheds": "Metal Shed",
+  Greenhouses: "Greenhouse",
+  Carports: "Carport",
+  "Aluminum Windows": "Aluminum Window",
+  "Entry Doors": "Entry Door",
+};
 
 export default function Home() {
   return (
@@ -27,22 +32,7 @@ export default function Home() {
         <span>WhatsApp: +86 15325897927</span>
       </div>
 
-      <header className="site-header">
-        <a className="brand" href="/">
-          <span className="brand-mark">SEE</span>
-          <span>SEEYES GARDEN</span>
-        </a>
-        <nav aria-label="Main navigation">
-          {navItems.map(([label, href]) => (
-            <a key={label} href={href}>
-              {label}
-            </a>
-          ))}
-        </nav>
-        <a className="header-cta" href="/quote">
-          GET QUOTE
-        </a>
-      </header>
+      <SiteHeader />
 
       <HeroCarousel slides={heroSlides} />
 
@@ -102,7 +92,9 @@ export default function Home() {
               <div className="product-card-body">
                 <h3>{category.title}</h3>
                 <p>{category.summary}</p>
-                <a href="/contact#inquiry">View More →</a>
+                <a href={`/products?category=${categorySlug(homeCategoryMap[category.title] ?? category.title)}`}>
+                  View More →
+                </a>
               </div>
             </article>
           ))}
@@ -220,24 +212,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="site-footer">
-        <div>
-          <strong>SEEYES GARDEN</strong>
-          <span>Outdoor Structure Manufacturer</span>
-        </div>
-        <div>
-          <strong>PRODUCTS</strong>
-          <span>Aluminum Pergola · Metal Shed · Raised Garden Bed · Greenhouse · Carport</span>
-        </div>
-        <div>
-          <strong>OEM/ODM SOLUTIONS</strong>
-          <span>OEM Service · ODM Service · Design Support · Private Label Packaging</span>
-        </div>
-        <div>
-          <strong>© 2024 Seeyes Garden.</strong>
-          <span>All Rights Reserved.</span>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

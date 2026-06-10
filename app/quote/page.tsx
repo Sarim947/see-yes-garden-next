@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ReadyProjectCta, SiteFooter } from "@/components/FooterSections";
+import SiteHeader from "@/components/SiteHeader";
 
 const solutionCards = [
   ["Custom Size", "Tailored to your exact dimensions", "▧"],
@@ -34,26 +35,33 @@ const footerBenefits = [
   ["On-time Delivery", "Reliable logistics to your destination.", "▭"],
 ];
 
-export default function QuotePage() {
+type QuotePageProps = {
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+};
+
+function first(value: string | string[] | undefined) {
+  return Array.isArray(value) ? value[0] : value;
+}
+
+export default async function QuotePage({ searchParams }: QuotePageProps) {
+  const params = searchParams ? await searchParams : {};
+  const selectedProduct = first(params.product);
+  const selectedCategory = first(params.category);
+  const defaultMessage =
+    first(params.message) ||
+    (selectedProduct
+      ? [
+          `I am interested in your ${selectedProduct}.`,
+          first(params.link) ? `Product link: ${first(params.link)}` : "",
+          selectedCategory ? `Category: ${selectedCategory}` : "",
+        ]
+          .filter(Boolean)
+          .join("\n")
+      : "");
+
   return (
     <main className="quote-page">
-      <header className="site-header">
-        <a className="brand" href="/">
-          <span className="brand-mark">SEE</span>
-          <span>SEEYES GARDEN</span>
-        </a>
-        <nav aria-label="Main navigation">
-          <a href="/">HOME</a>
-          <a href="/#products">PRODUCTS</a>
-          <a href="/#about">ABOUT</a>
-          <a href="/#projects">NEWS</a>
-          <a href="/#process">SUPPORT</a>
-          <a href="/contact">CONTACT US</a>
-        </nav>
-        <a className="header-cta" href="/quote">
-          GET QUOTE
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className="quote-hero">
         <Image
@@ -97,7 +105,12 @@ export default function QuotePage() {
             <div className="checkbox-grid">
               {products.map((item) => (
                 <label key={item}>
-                  <input name="productType" type="checkbox" value={item} />
+                  <input
+                    defaultChecked={item === selectedProduct || item === selectedCategory}
+                    name="productType"
+                    type="checkbox"
+                    value={item}
+                  />
                   {item}
                 </label>
               ))}
@@ -152,6 +165,7 @@ export default function QuotePage() {
           </div>
 
           <textarea
+            defaultValue={defaultMessage}
             name="message"
             required
             maxLength={1000}

@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { Suspense } from "react";
 import ContactForm from "@/components/ContactForm";
 import { ReadyProjectCta, SiteFooter } from "@/components/FooterSections";
+import SiteHeader from "@/components/SiteHeader";
 
 const contactInfo = [
   ["Email", "edison@seeyesgarden.com", "✉"],
@@ -46,23 +48,7 @@ const faqs = [
 export default function ContactPage() {
   return (
     <main>
-      <header className="site-header">
-        <a className="brand" href="/">
-          <span className="brand-mark">SEE</span>
-          <span>SEEYES GARDEN</span>
-        </a>
-        <nav aria-label="Main navigation">
-          <a href="/">HOME</a>
-          <a href="/#products">PRODUCTS</a>
-          <a href="/#about">ABOUT</a>
-          <a href="/#projects">NEWS</a>
-          <a href="/#process">SUPPORT</a>
-          <a href="/contact">CONTACT US</a>
-        </nav>
-        <a className="header-cta" href="/quote">
-          GET QUOTE
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className="contact-hero">
         <Image
@@ -103,7 +89,9 @@ export default function ContactPage() {
 
         <section className="contact-panel" id="inquiry">
           <h2>Send Your Inquiry</h2>
-          <ContactForm />
+          <Suspense fallback={null}>
+            <ContactForm />
+          </Suspense>
         </section>
 
         <section className="contact-panel">

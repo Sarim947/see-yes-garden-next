@@ -1,5 +1,6 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 const productOptions = [
@@ -15,8 +16,23 @@ const productOptions = [
 ];
 
 export default function ContactForm() {
+  const searchParams = useSearchParams();
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
+  const product = searchParams.get("product");
+  const category = searchParams.get("category");
+  const link = searchParams.get("link");
+  const defaultMessage =
+    searchParams.get("message") ||
+    (product
+      ? [
+          `I am interested in your ${product}.`,
+          link ? `Product link: ${link}` : "",
+          category ? `Category: ${category}` : "",
+        ]
+          .filter(Boolean)
+          .join("\n")
+      : "");
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -86,7 +102,13 @@ export default function ContactForm() {
         </label>
         <label>
           <span>Message *</span>
-          <textarea name="message" required placeholder="Message" rows={3} />
+          <textarea
+            name="message"
+            required
+            placeholder="Message"
+            rows={3}
+            defaultValue={defaultMessage}
+          />
         </label>
       </div>
       <label className="upload-field">
