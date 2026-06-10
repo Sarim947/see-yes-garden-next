@@ -51,14 +51,6 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
 
       <ProductsCatalog initialCategory={selectedCategory} />
 
-      <section className="supplier-band">
-        <div>
-          <strong>Looking for a Reliable Outdoor Structure Supplier?</strong>
-          <p>Partner with Seeyes Garden for stable quality, factory pricing, and professional service.</p>
-        </div>
-        <a className="secondary-btn" href="/contact#inquiry">Contact Our Sales Team →</a>
-      </section>
-
       <ReadyProjectCta />
       <SiteFooter />
     </main>

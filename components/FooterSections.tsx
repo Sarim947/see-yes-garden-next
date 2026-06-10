@@ -10,9 +10,6 @@ export function ReadyProjectCta() {
         <a className="secondary-btn" href="https://wa.me/8615325897927">
           Contact on WhatsApp
         </a>
-        <a className="secondary-btn" href="/">
-          Back to Home
-        </a>
       </div>
     </section>
   );

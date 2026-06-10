@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { categorySlug, getCategoryCounts } from "@/data/productsCatalog";
 
 const navItems = [
@@ -9,10 +12,11 @@ const navItems = [
 ];
 
 export default function SiteHeader() {
+  const [isOpen, setIsOpen] = useState(false);
   const categories = getCategoryCounts();
 
   return (
-    <header className="site-header">
+    <header className={`site-header${isOpen ? " is-open" : ""}`}>
       <a className="brand" href="/">
         <span className="brand-mark">SEE</span>
         <span>SEEYES GARDEN</span>
@@ -38,6 +42,15 @@ export default function SiteHeader() {
       <a className="header-cta" href="/quote">
         GET QUOTE
       </a>
+      <button
+        className="mobile-menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded={isOpen}
+        onClick={() => setIsOpen((open) => !open)}
+      >
+        ☰
+      </button>
     </header>
   );
 }

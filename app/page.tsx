@@ -10,6 +10,7 @@ import {
 } from "@/data/products";
 import HeroCarousel from "@/components/HeroCarousel";
 import SiteHeader from "@/components/SiteHeader";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 import { SiteFooter } from "@/components/FooterSections";
 import { categorySlug } from "@/data/productsCatalog";
 
@@ -116,7 +117,12 @@ export default function Home() {
         <div className="project-grid">
           {projectImages.map((image, index) => (
             <div className="project-tile" key={`${image}-${index}`}>
-              <Image src={image} alt="Global project" fill sizes="25vw" />
+              <Image
+                src={image}
+                alt="Global project"
+                fill
+                sizes="(max-width: 760px) 100vw, (max-width: 1080px) 50vw, 25vw"
+              />
             </div>
           ))}
         </div>
@@ -133,27 +139,7 @@ export default function Home() {
               factory-direct supply.
             </p>
           </div>
-          <div className="testimonial-grid">
-            {testimonials.map((item) => (
-              <article className="testimonial-card" key={item.title}>
-                <div className="testimonial-photo">
-                  <Image src={item.image} alt={item.title} fill sizes="360px" />
-                  <span>{item.badge}</span>
-                </div>
-                <div className="testimonial-copy">
-                  <div className="quote-mark">“</div>
-                  <p>{item.quote}</p>
-                  <div className="testimonial-author">
-                    <span>{item.initial}</span>
-                    <div>
-                      <strong>{item.title}</strong>
-                      <small>{item.customer}</small>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+          <TestimonialCarousel testimonials={testimonials} />
         </div>
       </section>
 
@@ -182,7 +168,13 @@ export default function Home() {
           {manufacturingCards.map((card) => (
             <article className="manufacturing-card" key={card.title}>
               <div className="manufacturing-image">
-                <Image src={card.image} alt={card.title} fill sizes="25vw" />
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  sizes="(max-width: 760px) 100vw, (max-width: 1080px) 50vw, 25vw"
+                  quality={90}
+                />
               </div>
               <div>
                 <h3>{card.title}</h3>
