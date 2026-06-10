@@ -15,14 +15,17 @@ type ProductsCatalogProps = {
 
 export default function ProductsCatalog({ initialCategory }: ProductsCatalogProps) {
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
+  const [selectedMaterial, setSelectedMaterial] = useState<string>();
   const counts = getCategoryCounts();
   const materialGroup = productFilterGroups.find((group) => group.title === "Material");
   const products = useMemo(
     () =>
-      selectedCategory
-        ? productsCatalog.filter((item) => item.category === selectedCategory)
-        : productsCatalog,
-    [selectedCategory],
+      productsCatalog.filter((item) => {
+        const categoryMatch = selectedCategory ? item.category === selectedCategory : true;
+        const materialMatch = selectedMaterial ? item.materials.includes(selectedMaterial) : true;
+        return categoryMatch && materialMatch;
+      }),
+    [selectedCategory, selectedMaterial],
   );
 
   return (
@@ -59,10 +62,15 @@ export default function ProductsCatalog({ initialCategory }: ProductsCatalogProp
           {materialGroup ? (
             <div className="filter-block">
               <h3>Material</h3>
-              {materialGroup.values.map((value) => (
-                <div className="filter-option" key={value}>
+            {materialGroup.values.map((value) => (
+                <button
+                  className={selectedMaterial === value ? "active" : ""}
+                  type="button"
+                  onClick={() => setSelectedMaterial(selectedMaterial === value ? undefined : value)}
+                  key={value}
+                >
                   <span /> {value} ({getFilterCount(materialGroup.key, value)})
-                </div>
+                </button>
               ))}
             </div>
           ) : null}
