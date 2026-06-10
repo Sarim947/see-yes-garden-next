@@ -352,11 +352,13 @@ p {
   width: 185px;
   height: 185px;
   margin: 54px auto 16px;
+  border-radius: 16px;
+  background: #ffffff;
 }
 
 .product-icon img {
-  filter: brightness(0);
   object-fit: contain;
+  padding: 18px;
 }
 
 .product-image {
