@@ -14,7 +14,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              document.addEventListener('invalid', function (event) {
+                var field = event.target;
+                if (!field || !field.setCustomValidity) return;
+                if (field.validity && field.validity.valueMissing) {
+                  field.setCustomValidity('Please complete this required field.');
+                } else if (field.validity && field.validity.typeMismatch) {
+                  field.setCustomValidity('Please enter a valid value.');
+                }
+              }, true);
+              document.addEventListener('input', function (event) {
+                var field = event.target;
+                if (field && field.setCustomValidity) field.setCustomValidity('');
+              }, true);
+              document.addEventListener('change', function (event) {
+                var field = event.target;
+                if (field && field.setCustomValidity) field.setCustomValidity('');
+              }, true);
+            `,
+          }}
+        />
+      </body>
     </html>
   );
 }

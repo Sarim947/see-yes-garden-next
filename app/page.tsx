@@ -16,7 +16,7 @@ const navItems = [
   ["ABOUT", "#about"],
   ["NEWS", "#projects"],
   ["SUPPORT", "#process"],
-  ["CONTACT US", "#contact"],
+  ["CONTACT US", "/contact"],
 ];
 
 export default function Home() {
@@ -39,7 +39,7 @@ export default function Home() {
             </a>
           ))}
         </nav>
-        <a className="header-cta" href="#contact">
+        <a className="header-cta" href="/quote">
           GET QUOTE
         </a>
       </header>
@@ -102,7 +102,7 @@ export default function Home() {
               <div className="product-card-body">
                 <h3>{category.title}</h3>
                 <p>{category.summary}</p>
-                <a href="#contact">View More →</a>
+                <a href="/contact#inquiry">View More →</a>
               </div>
             </article>
           ))}
@@ -210,7 +210,7 @@ export default function Home() {
             ZHEJIANG 321000, CHINA
           </p>
           <div className="contact-actions">
-            <a className="primary-btn" href="mailto:edison@seeyesgarden.com">
+            <a className="primary-btn" href="/contact#inquiry">
               edison@seeyesgarden.com
             </a>
             <a className="secondary-green" href="https://wa.me/8615325897927">
