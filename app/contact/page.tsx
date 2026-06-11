@@ -4,9 +4,33 @@ import ContactForm from "@/components/ContactForm";
 import { ReadyProjectCta, SiteFooter } from "@/components/FooterSections";
 import SiteHeader from "@/components/SiteHeader";
 
+const contactPeople = [
+  {
+    name: "Edison",
+    email: "edison@seeyesgarden.com",
+    whatsapp: "+86 15325897927",
+    department: "All Categories",
+  },
+  {
+    name: "Huan",
+    email: "huan@seeyesgarden.com",
+    whatsapp: "+86 18767505685",
+    department: "Doors & Windows",
+  },
+  {
+    name: "Lisa",
+    email: "lisa@seeyesgarden.com",
+    whatsapp: "+86 13615896696",
+    department: "All Categories",
+  },{
+    name: "Leah",
+    email: "Leah@seeyesgarden.com",
+    whatsapp: "+86 15527186109",
+    department: "All Categories",
+  },
+];
+
 const contactInfo = [
-  ["Email", "edison@seeyesgarden.com(Gardens, Doors)","huan@seeyesgarden.com(Doors)", "✉"],
-  ["Phone / WhatsApp", "+86 15325897927", "☎"],
   [
     "Address",
     "NO. 3988, BINHONG WEST ROAD, WUCHENG DISTRICT, JINHUA, ZHEJIANG 321000, CHINA",
@@ -74,6 +98,41 @@ export default function ContactPage() {
       <div className="contact-page-wrap">
         <section className="contact-panel">
           <h2>Factory Contact Information</h2>
+
+          <div className="contact-table-wrap">
+            <table className="contact-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>WhatsApp</th>
+                  <th>Department</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {contactPeople.map((person) => (
+                  <tr key={person.email}>
+                    <td>{person.name}</td>
+                    <td>
+                      <a href={`mailto:${person.email}`}>{person.email}</a>
+                    </td>
+                    <td>
+                      <a
+                        href={`https://wa.me/${person.whatsapp.replace(/\D/g, "")}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {person.whatsapp}
+                      </a>
+                    </td>
+                    <td>{person.department}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
           <div className="contact-info-list">
             {contactInfo.map(([title, text, icon]) => (
               <article key={title}>
