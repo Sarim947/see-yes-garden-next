@@ -120,7 +120,7 @@ export default function ContactForm() {
         />
         <em>Upload File</em>
         <strong>Upload Drawing / Reference Image</strong>
-        <span>Click to upload or drag and drop JPG, PNG, PDF. Max 10MB</span>
+        <span>Click to upload or drag and drop JPG, PNG, PDF. Max 20MB</span>
       </label>
       <button className="submit-btn" disabled={status === "sending"} type="submit">
         {status === "sending" ? "Submitting..." : "Submit Inquiry"}
