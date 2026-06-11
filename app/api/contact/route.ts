@@ -105,7 +105,15 @@ async function createSignedFileUrl(supabaseUrl: string, bucket: string, filePath
   const result = (await response.json()) as { signedURL?: string; signedUrl?: string };
   const signedPath = result.signedURL || result.signedUrl;
 
-  return signedPath ? `${supabaseUrl}${signedPath}` : `${supabaseUrl}/storage/v1/object/public/${bucket}/${filePath}`;
+  if (!signedPath) {
+    return `${supabaseUrl}/storage/v1/object/public/${bucket}/${filePath}`;
+  }
+
+  if (signedPath.startsWith("http")) {
+    return signedPath;
+  }
+
+  return `${supabaseUrl}/storage/v1${signedPath.startsWith("/") ? signedPath : `/${signedPath}`}`;
 }
 
 async function uploadFileToSupabase(file: File) {
