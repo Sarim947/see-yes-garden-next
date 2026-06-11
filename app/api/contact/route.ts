@@ -23,11 +23,21 @@ type InquiryPayload = {
 };
 
 function getRequiredEnv(key: string) {
-  const value = process.env[key];
+  const value = process.env[key]?.trim().replace(/^["']|["']$/g, "");
   if (!value) {
     throw new Error(`Missing server environment variable: ${key}`);
   }
   return value;
+}
+
+function getSupabaseServiceRoleKey() {
+  const key = getRequiredEnv("SUPABASE_SERVICE_ROLE_KEY");
+  if (key.split(".").length !== 3) {
+    throw new Error(
+      "Invalid SUPABASE_SERVICE_ROLE_KEY. Please copy the service_role JWT from Supabase Project Settings > API, not the anon key or project reference.",
+    );
+  }
+  return key;
 }
 
 function textValue(formData: FormData, key: string) {
@@ -57,7 +67,7 @@ async function uploadFileToSupabase(file: File) {
   }
 
   const supabaseUrl = getRequiredEnv("SUPABASE_URL").replace(/\/$/, "");
-  const serviceRoleKey = getRequiredEnv("SUPABASE_SERVICE_ROLE_KEY");
+  const serviceRoleKey = getSupabaseServiceRoleKey();
   const bucket = process.env.SUPABASE_STORAGE_BUCKET || DEFAULT_BUCKET;
   const filePath = `inquiries/${Date.now()}-${crypto.randomUUID()}-${safeFileName(file.name)}`;
 
@@ -83,7 +93,7 @@ async function uploadFileToSupabase(file: File) {
 
 async function saveInquiry(payload: InquiryPayload) {
   const supabaseUrl = getRequiredEnv("SUPABASE_URL").replace(/\/$/, "");
-  const serviceRoleKey = getRequiredEnv("SUPABASE_SERVICE_ROLE_KEY");
+  const serviceRoleKey = getSupabaseServiceRoleKey();
   const table = process.env.SUPABASE_INQUIRIES_TABLE || DEFAULT_TABLE;
 
   const response = await fetch(`${supabaseUrl}/rest/v1/${table}`, {
