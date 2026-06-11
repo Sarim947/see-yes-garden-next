@@ -18,6 +18,7 @@ type InquiryPayload = {
   customization: string;
   message: string;
   fileUrl: string;
+  storagePath: string;
   status: string;
   formType: string;
 };
@@ -65,13 +66,51 @@ function textValues(formData: FormData, key: string) {
     .filter(Boolean);
 }
 
-function safeFileName(name: string) {
-  return name.replace(/[^a-zA-Z0-9._-]/g, "-").slice(0, 120);
+function safeExtension(name: string) {
+  const match = name.toLowerCase().match(/\.([a-z0-9]{1,12})$/);
+  return match ? `.${match[1]}` : "";
+}
+
+async function ensureStorageBucket(supabaseUrl: string, bucket: string) {
+  const response = await fetch(`${supabaseUrl}/storage/v1/bucket`, {
+    method: "POST",
+    headers: supabaseHeaders("application/json"),
+    body: JSON.stringify({
+      id: bucket,
+      name: bucket,
+      public: true,
+    }),
+  });
+
+  if (response.ok || response.status === 409) {
+    return;
+  }
+
+  throw new Error(`Storage bucket setup failed: ${await response.text()}`);
+}
+
+async function createSignedFileUrl(supabaseUrl: string, bucket: string, filePath: string) {
+  const response = await fetch(`${supabaseUrl}/storage/v1/object/sign/${bucket}/${filePath}`, {
+    method: "POST",
+    headers: supabaseHeaders("application/json"),
+    body: JSON.stringify({
+      expiresIn: 60 * 60 * 24 * 90,
+    }),
+  });
+
+  if (!response.ok) {
+    return `${supabaseUrl}/storage/v1/object/public/${bucket}/${filePath}`;
+  }
+
+  const result = (await response.json()) as { signedURL?: string; signedUrl?: string };
+  const signedPath = result.signedURL || result.signedUrl;
+
+  return signedPath ? `${supabaseUrl}${signedPath}` : `${supabaseUrl}/storage/v1/object/public/${bucket}/${filePath}`;
 }
 
 async function uploadFileToSupabase(file: File) {
   if (!file || file.size === 0) {
-    return "";
+    return { url: "", path: "" };
   }
 
   if (file.size > MAX_FILE_SIZE) {
@@ -80,25 +119,34 @@ async function uploadFileToSupabase(file: File) {
 
   const supabaseUrl = getRequiredEnv("SUPABASE_URL").replace(/\/$/, "");
   const bucket = process.env.SUPABASE_STORAGE_BUCKET || DEFAULT_BUCKET;
-  const filePath = `inquiries/${Date.now()}-${crypto.randomUUID()}-${safeFileName(file.name)}`;
+  const filePath = `inquiries/${Date.now()}-${crypto.randomUUID()}${safeExtension(file.name)}`;
 
-  const uploadResponse = await fetch(
-    `${supabaseUrl}/storage/v1/object/${bucket}/${filePath}`,
-    {
+  async function upload() {
+    return fetch(`${supabaseUrl}/storage/v1/object/${bucket}/${filePath}`, {
       method: "POST",
       headers: {
         ...supabaseHeaders(file.type || "application/octet-stream"),
         "x-upsert": "false",
       },
       body: Buffer.from(await file.arrayBuffer()),
-    },
-  );
+    });
+  }
+
+  let uploadResponse = await upload();
+
+  if (uploadResponse.status === 404) {
+    await ensureStorageBucket(supabaseUrl, bucket);
+    uploadResponse = await upload();
+  }
 
   if (!uploadResponse.ok) {
     throw new Error(`Attachment upload failed: ${await uploadResponse.text()}`);
   }
 
-  return `${supabaseUrl}/storage/v1/object/public/${bucket}/${filePath}`;
+  return {
+    url: await createSignedFileUrl(supabaseUrl, bucket, filePath),
+    path: `${bucket}/${filePath}`,
+  };
 }
 
 async function saveInquiry(payload: InquiryPayload) {
@@ -155,6 +203,7 @@ async function sendInquiryEmail(payload: InquiryPayload) {
     payload.message,
     "",
     `File URL: ${payload.fileUrl || "No file uploaded"}`,
+    `Storage Path: ${payload.storagePath || "-"}`,
   ];
 
   const response = await fetch("https://api.resend.com/emails", {
@@ -177,7 +226,7 @@ async function sendInquiryEmail(payload: InquiryPayload) {
   }
 }
 
-function buildPayload(formData: FormData, fileUrl: string): InquiryPayload {
+function buildPayload(formData: FormData, file: { url: string; path: string }): InquiryPayload {
   const productType = textValues(formData, "productType").join(", ");
   const customization = textValues(formData, "customization").join(", ");
   const productCategory = textValue(formData, "productCategory") || textValue(formData, "category");
@@ -194,7 +243,8 @@ function buildPayload(formData: FormData, fileUrl: string): InquiryPayload {
     quantity: textValue(formData, "quantity"),
     customization,
     message: textValue(formData, "message"),
-    fileUrl,
+    fileUrl: file.url,
+    storagePath: file.path,
     status: "new",
     formType: textValue(formData, "formType") || "inquiry",
   };
@@ -204,8 +254,8 @@ export async function POST(request: Request) {
   try {
     const formData = await request.formData();
     const attachment = formData.get("attachment");
-    const fileUrl = attachment instanceof File ? await uploadFileToSupabase(attachment) : "";
-    const payload = buildPayload(formData, fileUrl);
+    const file = attachment instanceof File ? await uploadFileToSupabase(attachment) : { url: "", path: "" };
+    const payload = buildPayload(formData, file);
 
     if (!payload.name || !payload.email || !payload.message) {
       return NextResponse.json(

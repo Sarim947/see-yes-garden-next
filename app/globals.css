@@ -979,6 +979,14 @@ p {
   height: auto;
   clip: auto;
   color: var(--muted);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.upload-field em + strong + span:not(:empty),
+.quote-upload small:not(:empty) {
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .submit-btn {
@@ -1264,6 +1272,12 @@ p {
 .quote-upload span {
   color: var(--green);
   font-weight: 900;
+}
+
+.quote-upload small {
+  max-width: calc(100% - 28px);
+  color: var(--muted);
+  overflow-wrap: anywhere;
 }
 
 .quote-fields {

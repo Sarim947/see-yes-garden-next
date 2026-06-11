@@ -33,6 +33,7 @@ export default function QuoteForm({
 }: QuoteFormProps) {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
+  const [fileName, setFileName] = useState("");
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -56,6 +57,7 @@ export default function QuoteForm({
       setStatus("success");
       setMessage("Thanks. Your custom request has been sent. Our factory team will reply soon.");
       form.reset();
+      setFileName("");
     } catch (error) {
       setStatus("error");
       setMessage(error instanceof Error ? error.message : "Submit failed. Please try again.");
@@ -98,9 +100,14 @@ export default function QuoteForm({
       <div className="quote-group">
         <strong>Upload Drawing or Reference Image</strong>
         <label className="quote-upload">
-          <input name="attachment" type="file" accept=".jpg,.jpeg,.png,.webp,.pdf,.dwg,.dxf" />
-          <span>Click to upload or drag and drop</span>
-          <small>JPG, PNG, PDF, CAD files up to 20MB</small>
+          <input
+            name="attachment"
+            type="file"
+            accept=".jpg,.jpeg,.png,.webp,.pdf,.dwg,.dxf"
+            onChange={(event) => setFileName(event.currentTarget.files?.[0]?.name || "")}
+          />
+          <span>{fileName ? "File Selected" : "Click to upload or drag and drop"}</span>
+          <small>{fileName || "JPG, PNG, PDF, CAD files up to 20MB"}</small>
         </label>
       </div>
 

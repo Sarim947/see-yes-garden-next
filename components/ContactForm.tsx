@@ -19,6 +19,7 @@ export default function ContactForm() {
   const searchParams = useSearchParams();
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
+  const [fileName, setFileName] = useState("");
   const product = searchParams.get("product");
   const category = searchParams.get("category");
   const link = searchParams.get("link");
@@ -56,6 +57,7 @@ export default function ContactForm() {
       setStatus("success");
       setMessage("Thanks. Your inquiry has been submitted. Our factory team will reply soon.");
       form.reset();
+      setFileName("");
     } catch (error) {
       setStatus("error");
       setMessage(error instanceof Error ? error.message : "Submit failed. Please try again.");
@@ -117,10 +119,11 @@ export default function ContactForm() {
           name="attachment"
           type="file"
           accept=".jpg,.jpeg,.png,.webp,.pdf,.dwg,.dxf"
+          onChange={(event) => setFileName(event.currentTarget.files?.[0]?.name || "")}
         />
-        <em>Upload File</em>
+        <em>{fileName ? "File Selected" : "Upload File"}</em>
         <strong>Upload Drawing / Reference Image</strong>
-        <span>Click to upload or drag and drop JPG, PNG, PDF. Max 20MB</span>
+        <span>{fileName || "Click to upload or drag and drop JPG, PNG, PDF. Max 20MB"}</span>
       </label>
       <button className="submit-btn" disabled={status === "sending"} type="submit">
         {status === "sending" ? "Submitting..." : "Submit Inquiry"}
