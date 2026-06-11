@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 
-const MAX_FILE_SIZE = 10 * 1024 * 1024;
+const MAX_FILE_SIZE = 20 * 1024 * 1024;
 
 type InquiryPayload = {
   name: string;
@@ -13,11 +13,23 @@ type InquiryPayload = {
   quantity: string;
   message: string;
   attachmentUrl?: string;
+  formType: string;
+  productTypes: string[];
+  customization: string[];
+  materialPreference: string;
 };
 
 function value(formData: FormData, key: string) {
   const entry = formData.get(key);
   return typeof entry === "string" ? entry.trim() : "";
+}
+
+function values(formData: FormData, key: string) {
+  return formData
+    .getAll(key)
+    .filter((entry): entry is string => typeof entry === "string")
+    .map((entry) => entry.trim())
+    .filter(Boolean);
 }
 
 async function uploadAttachment(file: File) {
@@ -30,7 +42,7 @@ async function uploadAttachment(file: File) {
   }
 
   if (file.size > MAX_FILE_SIZE) {
-    throw new Error("Attachment is larger than 10MB.");
+        throw new Error("Attachment is larger than 20MB.");
   }
 
   const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, "-");
@@ -104,6 +116,9 @@ async function sendInquiryEmail(payload: InquiryPayload) {
     `Phone: ${payload.phone || "-"}`,
     `Country: ${payload.country || "-"}`,
     `Product Category: ${payload.productCategory || "-"}`,
+    `Product Type: ${payload.productTypes.length ? payload.productTypes.join(", ") : "-"}`,
+    `Customization: ${payload.customization.length ? payload.customization.join(", ") : "-"}`,
+    `Material Preference: ${payload.materialPreference || "-"}`,
     `Quantity: ${payload.quantity || "-"}`,
     "",
     payload.message,
@@ -120,7 +135,7 @@ async function sendInquiryEmail(payload: InquiryPayload) {
     body: JSON.stringify({
       from,
       to,
-      subject: `New SeeYes Garden inquiry from ${payload.name}`,
+      subject: `New SeeYes Garden ${payload.formType || "inquiry"} from ${payload.name}`,
       text: lines.join("\n"),
       reply_to: payload.email,
     }),
@@ -154,10 +169,14 @@ export async function POST(request: Request) {
       email,
       message,
       attachmentUrl,
+      formType: value(formData, "formType") || "inquiry",
       phone: value(formData, "phone"),
       country: value(formData, "country"),
-      productCategory: value(formData, "productCategory"),
+      productCategory: value(formData, "productCategory") || value(formData, "category"),
       quantity: value(formData, "quantity"),
+      productTypes: values(formData, "productType"),
+      customization: values(formData, "customization"),
+      materialPreference: value(formData, "materialPreference"),
     };
 
     await saveInquiry(payload);

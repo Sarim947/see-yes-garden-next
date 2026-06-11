@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ReadyProjectCta, SiteFooter } from "@/components/FooterSections";
+import QuoteForm from "@/components/QuoteForm";
 import SiteHeader from "@/components/SiteHeader";
 
 const solutionCards = [
@@ -8,24 +9,6 @@ const solutionCards = [
   ["OEM / ODM Service", "Design and develop as your brand", "⚙"],
   ["Logo & Packaging", "Custom logo and packaging", "▤"],
   ["Bulk Order Support", "Large quantity with best terms", "▣"],
-];
-
-const products = [
-  "Aluminum Pergola",
-  "Metal Shed",
-  "Raised Garden Bed",
-  "Greenhouse",
-  "Carport",
-  "Other",
-];
-
-const customNeeds = [
-  "Custom Size",
-  "Custom Color",
-  "Logo",
-  "Packaging",
-  "OEM / ODM",
-  "Full Project Solution",
 ];
 
 const footerBenefits = [
@@ -99,82 +82,11 @@ export default async function QuotePage({ searchParams }: QuotePageProps) {
           </div>
         </div>
 
-        <form className="quote-form" action="/api/contact" method="post" encType="multipart/form-data">
-          <div className="quote-group">
-            <strong>Product Type *</strong>
-            <div className="checkbox-grid">
-              {products.map((item) => (
-                <label key={item}>
-                  <input
-                    defaultChecked={item === selectedProduct || item === selectedCategory}
-                    name="productType"
-                    type="checkbox"
-                    value={item}
-                  />
-                  {item}
-                </label>
-              ))}
-            </div>
-          </div>
-
-          <div className="quote-group">
-            <strong>Customization Needed *</strong>
-            <div className="checkbox-grid">
-              {customNeeds.map((item) => (
-                <label key={item}>
-                  <input name="customization" type="checkbox" value={item} />
-                  {item}
-                </label>
-              ))}
-            </div>
-          </div>
-
-          <div className="quote-group">
-            <strong>Upload Drawing or Reference Image</strong>
-            <label className="quote-upload">
-              <input name="attachment" type="file" accept=".jpg,.jpeg,.png,.webp,.pdf,.dwg,.dxf" />
-              <span>Click to upload or drag and drop</span>
-              <small>JPG, PNG, PDF, CAD files up to 20MB</small>
-            </label>
-          </div>
-
-          <div className="quote-fields">
-            <input name="name" required placeholder="Your Name *" />
-            <input name="phone" placeholder="WhatsApp" />
-            <input name="email" required type="email" placeholder="Email *" />
-            <select name="materialPreference" defaultValue="">
-              <option value="" disabled>
-                Select Material
-              </option>
-              <option>Aluminum</option>
-              <option>Galvanized Steel</option>
-              <option>Polycarbonate</option>
-              <option>Not Sure Yet</option>
-            </select>
-            <select name="country" defaultValue="">
-              <option value="" disabled>
-                Select Country / Market
-              </option>
-              <option>USA</option>
-              <option>Canada</option>
-              <option>Australia</option>
-              <option>Europe</option>
-              <option>Other</option>
-            </select>
-            <input name="quantity" placeholder="Order Quantity" />
-          </div>
-
-          <textarea
-            defaultValue={defaultMessage}
-            name="message"
-            required
-            maxLength={1000}
-            placeholder="Please describe your project, size, design idea, special requirements, etc. *"
-            rows={5}
-          />
-
-          <button type="submit">Submit Custom Request →</button>
-        </form>
+        <QuoteForm
+          defaultMessage={defaultMessage}
+          selectedCategory={selectedCategory}
+          selectedProduct={selectedProduct}
+        />
       </section>
 
       <section className="quote-benefits">

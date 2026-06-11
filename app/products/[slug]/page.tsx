@@ -103,19 +103,6 @@ export default async function ProductDetailPage({ params }: ProductDetailProps) 
         </div>
       </section>
 
-      <section className="product-inquiry-band">
-        <div>
-          <h2>Send Inquiry for {product.title}</h2>
-          <p>
-            We will automatically include this product name, link and category in
-            your inquiry, so you can request a quotation faster.
-          </p>
-        </div>
-        <a className="primary-btn" href={inquiryHref(product, "contact")}>
-          Send Inquiry
-        </a>
-      </section>
-
       <ReadyProjectCta />
       <SiteFooter />
     </main>

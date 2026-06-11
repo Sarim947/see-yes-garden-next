@@ -64,6 +64,7 @@ export default function ContactForm() {
 
   return (
     <form className="inquiry-form" onSubmit={handleSubmit}>
+      <input name="formType" type="hidden" value="inquiry" />
       <div className="form-row two">
         <label>
           <span>Your Name *</span>
