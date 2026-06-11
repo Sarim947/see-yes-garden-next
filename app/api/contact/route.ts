@@ -30,14 +30,26 @@ function getRequiredEnv(key: string) {
   return value;
 }
 
-function getSupabaseServiceRoleKey() {
+function getSupabaseServiceKey() {
   const key = getRequiredEnv("SUPABASE_SERVICE_ROLE_KEY");
-  if (key.split(".").length !== 3) {
-    throw new Error(
-      "Invalid SUPABASE_SERVICE_ROLE_KEY. Please copy the service_role JWT from Supabase Project Settings > API, not the anon key or project reference.",
-    );
-  }
   return key;
+}
+
+function supabaseHeaders(contentType?: string) {
+  const key = getSupabaseServiceKey();
+  const headers: Record<string, string> = {
+    apikey: key,
+  };
+
+  if (!key.startsWith("sb_secret_")) {
+    headers.Authorization = `Bearer ${key}`;
+  }
+
+  if (contentType) {
+    headers["Content-Type"] = contentType;
+  }
+
+  return headers;
 }
 
 function textValue(formData: FormData, key: string) {
@@ -67,7 +79,6 @@ async function uploadFileToSupabase(file: File) {
   }
 
   const supabaseUrl = getRequiredEnv("SUPABASE_URL").replace(/\/$/, "");
-  const serviceRoleKey = getSupabaseServiceRoleKey();
   const bucket = process.env.SUPABASE_STORAGE_BUCKET || DEFAULT_BUCKET;
   const filePath = `inquiries/${Date.now()}-${crypto.randomUUID()}-${safeFileName(file.name)}`;
 
@@ -76,8 +87,7 @@ async function uploadFileToSupabase(file: File) {
     {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${serviceRoleKey}`,
-        "Content-Type": file.type || "application/octet-stream",
+        ...supabaseHeaders(file.type || "application/octet-stream"),
         "x-upsert": "false",
       },
       body: Buffer.from(await file.arrayBuffer()),
@@ -93,15 +103,12 @@ async function uploadFileToSupabase(file: File) {
 
 async function saveInquiry(payload: InquiryPayload) {
   const supabaseUrl = getRequiredEnv("SUPABASE_URL").replace(/\/$/, "");
-  const serviceRoleKey = getSupabaseServiceRoleKey();
   const table = process.env.SUPABASE_INQUIRIES_TABLE || DEFAULT_TABLE;
 
   const response = await fetch(`${supabaseUrl}/rest/v1/${table}`, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${serviceRoleKey}`,
-      apikey: serviceRoleKey,
-      "Content-Type": "application/json",
+      ...supabaseHeaders("application/json"),
       Prefer: "return=minimal",
     },
     body: JSON.stringify({
