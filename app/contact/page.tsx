@@ -5,7 +5,7 @@ import { ReadyProjectCta, SiteFooter } from "@/components/FooterSections";
 import SiteHeader from "@/components/SiteHeader";
 
 const contactInfo = [
-  ["Email", "edison@seeyesgarden.com", "✉"],
+  ["Email", "edison@seeyesgarden.com(Gardens, Doors)","huan@seeyesgarden.com(Doors)", "✉"],
   ["Phone / WhatsApp", "+86 15325897927", "☎"],
   [
     "Address",
