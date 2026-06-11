@@ -68,15 +68,10 @@ a {
   font-weight: 900;
 }
 
-.brand-mark {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  border-radius: 6px;
-  background: var(--green);
-  color: #fff;
-  font-size: 13px;
+.brand img {
+  display: block;
+  width: 140px;
+  height: auto;
 }
 
 .site-header nav {
@@ -1945,8 +1940,8 @@ p {
     padding: 11px 14px;
   }
 
-  .brand span:last-child {
-    font-size: 14px;
+  .brand img {
+    width: 110px;
   }
 
   .hero {

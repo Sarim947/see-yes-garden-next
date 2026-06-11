@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { categorySlug, getCategoryCounts } from "@/data/productsCatalog";
 
 const navItems = [
@@ -18,8 +19,7 @@ export default function SiteHeader() {
   return (
     <header className={`site-header${isOpen ? " is-open" : ""}`}>
       <a className="brand" href="/">
-        <span className="brand-mark">SEE</span>
-        <span>SEEYES GARDEN</span>
+        <Image src="/images/seeyeslogo.png" alt="SeeYes Garden" width={140} height={51} priority />
       </a>
       <nav aria-label="Main navigation">
         <a href="/">HOME</a>
