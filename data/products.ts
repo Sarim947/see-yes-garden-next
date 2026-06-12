@@ -59,7 +59,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "Entry Doors",
     slug: "entry-doors",
-    image: "/images/entry-door.webp",
+    image: "/images/products/pivot-door/product-card/pivot-door-card-desktop.jpg",
     icon: "/images/icons/entry-door.webp",
     summary: "Secure and customizable entry doors for houses and villas.",
   },
@@ -174,7 +174,7 @@ export const heroSlides = [
   },
   {
     title: "entry steel door",
-    image: "/images/slide-entry-door.webp",
+    image: "/images/products/pivot-door/detail-carousel/desktop/01-scene-main.jpg",
   },
   {
     title: "aluminum window",

@@ -4,10 +4,22 @@ export const entryDoorPage = {
   subtitle: "Factory direct entry door solutions for villas, apartments and project contractors.",
   productPath: "/products/entry-door",
   gallery: [
-    "/images/slide-entry-door.webp",
-    "/images/entry-door.webp",
-    "/images/aluminum-window.webp",
-    "/images/privacy-screen.webp",
+    {
+      desktop: "/images/products/pivot-door/detail-carousel/desktop/01-scene-main.jpg",
+      mobile: "/images/products/pivot-door/detail-carousel/mobile/01-scene-main-mobile.jpg",
+    },
+    {
+      desktop: "/images/products/pivot-door/detail-carousel/desktop/02-white-main.jpg",
+      mobile: "/images/products/pivot-door/detail-carousel/mobile/02-white-main-mobile.jpg",
+    },
+    {
+      desktop: "/images/products/pivot-door/detail-carousel/desktop/03-pivot-structure.jpg",
+      mobile: "/images/products/pivot-door/detail-carousel/mobile/03-pivot-structure-mobile.jpg",
+    },
+    {
+      desktop: "/images/products/pivot-door/detail-carousel/desktop/04-pivot-hardware.jpg",
+      mobile: "/images/products/pivot-door/detail-carousel/mobile/04-pivot-hardware-mobile.jpg",
+    },
   ],
   highlights: ["Security structure", "Custom size", "Weather resistant", "OEM & ODM support"],
   quickSpecs: [
@@ -34,16 +46,16 @@ export const entryDoorPage = {
   ],
   applications: [
     {
-      title: "Villa",
-      image: "/images/hero-home.jpg",
+      title: "Office Workplace",
+      image: "/images/products/pivot-door/application-scenes/01-office-workplace-scene.jpg",
     },
     {
-      title: "Commercial Building",
-      image: "/images/factory-about.webp",
+      title: "Luxury Villa",
+      image: "/images/products/pivot-door/application-scenes/02-luxury-villa-scene.jpg",
     },
     {
-      title: "Apartment",
-      image: "/images/aluminum-window.webp",
+      title: "Luxury Apartment",
+      image: "/images/products/pivot-door/application-scenes/03-luxury-apartment-scene.jpg",
     },
   ],
   factorySteps: [
@@ -89,15 +101,15 @@ export const entryDoorPage = {
   relatedProducts: [
     {
       title: "Pivot Door",
-      image: "/images/entry-door.webp",
+      image: "/images/products/pivot-door/related-products/pivot-door-related.jpg",
     },
     {
       title: "Aluminum Profile Door",
-      image: "/images/aluminum-window.webp",
+      image: "/images/products/entry-door/related-products/02-aluminum-profile-door.webp",
     },
     {
       title: "Steel Door",
-      image: "/images/slide-entry-door.webp",
+      image: "/images/products/entry-door/related-products/03-steel-door.webp",
     },
   ],
 };

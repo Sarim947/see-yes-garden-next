@@ -88,7 +88,14 @@ export default function ProductsCatalog({ initialCategory }: ProductsCatalogProp
           {products.map((product) => (
             <article className="catalog-card" key={product.slug}>
               <div className="catalog-image">
-                <Image src={product.image} alt={product.title} fill sizes="(max-width: 900px) 100vw, 33vw" />
+                {product.mobileImage ? (
+                  <picture>
+                    <source media="(max-width: 760px)" srcSet={product.mobileImage} />
+                    <img src={product.image} alt={product.title} />
+                  </picture>
+                ) : (
+                  <Image src={product.image} alt={product.title} fill sizes="(max-width: 900px) 100vw, 33vw" />
+                )}
               </div>
               <div className="catalog-body">
                 <h3>{product.title}</h3>

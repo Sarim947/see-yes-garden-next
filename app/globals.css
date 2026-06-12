@@ -1597,9 +1597,19 @@ p {
   background: var(--green-soft);
 }
 
+.catalog-image picture,
+.entry-door-carousel-stage picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
 .catalog-image img,
 .product-main-image img,
-.product-thumbs img {
+.product-thumbs img,
+.entry-door-carousel-stage picture img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -1772,7 +1782,7 @@ p {
 .entry-door-hero {
   background:
     linear-gradient(90deg, rgba(7, 25, 16, 0.9), rgba(7, 25, 16, 0.55)),
-    url("/images/slide-entry-door.webp") center / cover;
+    url("/images/products/pivot-door/detail-carousel/desktop/01-scene-main.jpg") center / cover;
   color: #fff;
 }
 

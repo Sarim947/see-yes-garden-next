@@ -1,12 +1,24 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
+export type EntryDoorCarouselImage = string | {
+  desktop: string;
+  mobile?: string;
+};
+
 type EntryDoorCarouselProps = {
-  images: string[];
+  images: EntryDoorCarouselImage[];
   title: string;
 };
+
+function getImageSrc(image: EntryDoorCarouselImage) {
+  return typeof image === "string" ? image : image.desktop;
+}
+
+function getMobileSrc(image: EntryDoorCarouselImage) {
+  return typeof image === "string" ? undefined : image.mobile;
+}
 
 export default function EntryDoorCarousel({ images, title }: EntryDoorCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -23,14 +35,11 @@ export default function EntryDoorCarousel({ images, title }: EntryDoorCarouselPr
     <div className="entry-door-carousel" aria-label="Entry door image carousel">
       <div className="entry-door-carousel-stage">
         {images.map((image, index) => (
-          <figure className={index === activeIndex ? "is-active" : ""} key={image}>
-            <Image
-              src={image}
-              alt={`${title} view ${index + 1}`}
-              fill
-              priority={index === 0}
-              sizes="(max-width: 900px) 100vw, 50vw"
-            />
+          <figure className={index === activeIndex ? "is-active" : ""} key={getImageSrc(image)}>
+            <picture>
+              {getMobileSrc(image) ? <source media="(max-width: 760px)" srcSet={getMobileSrc(image)} /> : null}
+              <img src={getImageSrc(image)} alt={`${title} view ${index + 1}`} loading={index === 0 ? "eager" : "lazy"} />
+            </picture>
           </figure>
         ))}
       </div>
@@ -40,7 +49,7 @@ export default function EntryDoorCarousel({ images, title }: EntryDoorCarouselPr
           <button
             aria-label={`Show slide ${index + 1}`}
             className={index === activeIndex ? "is-active" : ""}
-            key={image}
+            key={getImageSrc(image)}
             onClick={() => setActiveIndex(index)}
             type="button"
           />

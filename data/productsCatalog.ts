@@ -5,7 +5,8 @@ export type ProductItem = {
   subtitle: string;
   description: string;
   image: string;
-  gallery: string[];
+  mobileImage?: string;
+  gallery: Array<string | { desktop: string; mobile?: string }>;
   highlights: string[];
   applications: string[];
   materials: string[];
@@ -151,12 +152,25 @@ export const productsCatalog: ProductItem[] = [
     subtitle: "Secure entry doors for residential building projects.",
     description:
       "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
-    image: "/images/slide-entry-door.webp",
+    image: "/images/products/pivot-door/product-card/pivot-door-card-desktop.jpg",
+    mobileImage: "/images/products/pivot-door/product-card/pivot-door-card-mobile.jpg",
     gallery: [
-      "/images/slide-entry-door.webp",
-      "/images/entry-door.webp",
-      "/images/aluminum-window.webp",
-      "/images/privacy-screen.webp",
+      {
+        desktop: "/images/products/pivot-door/detail-carousel/desktop/01-scene-main.jpg",
+        mobile: "/images/products/pivot-door/detail-carousel/mobile/01-scene-main-mobile.jpg",
+      },
+      {
+        desktop: "/images/products/pivot-door/detail-carousel/desktop/02-white-main.jpg",
+        mobile: "/images/products/pivot-door/detail-carousel/mobile/02-white-main-mobile.jpg",
+      },
+      {
+        desktop: "/images/products/pivot-door/detail-carousel/desktop/03-pivot-structure.jpg",
+        mobile: "/images/products/pivot-door/detail-carousel/mobile/03-pivot-structure-mobile.jpg",
+      },
+      {
+        desktop: "/images/products/pivot-door/detail-carousel/desktop/04-pivot-hardware.jpg",
+        mobile: "/images/products/pivot-door/detail-carousel/mobile/04-pivot-hardware-mobile.jpg",
+      },
     ],
     highlights: ["Security structure", "Custom size", "Weather resistant", "OEM & ODM support"],
     applications: ["Residential", "Commercial & Hospitality"],
