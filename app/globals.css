@@ -1769,6 +1769,338 @@ p {
   margin-top: 28px;
 }
 
+.entry-door-hero {
+  background:
+    linear-gradient(90deg, rgba(7, 25, 16, 0.9), rgba(7, 25, 16, 0.55)),
+    url("/images/slide-entry-door.webp") center / cover;
+  color: #fff;
+}
+
+.entry-door-hero-inner {
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 46px 0 58px;
+}
+
+.entry-door-top {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(320px, 2fr);
+  gap: 38px;
+  align-items: center;
+  margin-top: 26px;
+}
+
+.entry-door-carousel {
+  display: grid;
+  gap: 14px;
+}
+
+.entry-door-carousel-stage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 8px;
+  background: #e7eee9;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.entry-door-carousel-stage figure {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.entry-door-carousel-stage figure.is-active {
+  opacity: 1;
+}
+
+.entry-door-carousel-stage img {
+  object-fit: cover;
+}
+
+.entry-door-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+}
+
+.entry-door-carousel-dots button {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.52);
+  cursor: pointer;
+}
+
+.entry-door-carousel-dots button.is-active {
+  width: 28px;
+  background: var(--green);
+}
+
+.entry-door-copy {
+  min-width: 0;
+}
+
+.entry-door-copy h1 {
+  max-width: 520px;
+  margin-bottom: 18px;
+  color: #fff;
+  font-size: clamp(34px, 3.6vw, 54px);
+  line-height: 1.02;
+}
+
+.entry-door-copy p:not(.eyebrow) {
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 18px;
+}
+
+.entry-door-copy .detail-check-list {
+  margin-top: 24px;
+}
+
+.entry-door-copy .detail-check-list li {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.entry-door-copy .primary-btn {
+  margin-top: 28px;
+}
+
+.entry-door-quick-specs {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  width: min(1180px, calc(100% - 64px));
+  margin: -34px auto 56px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 44px rgba(8, 34, 18, 0.12);
+  position: relative;
+  z-index: 2;
+}
+
+.entry-door-quick-specs article {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  min-height: 118px;
+  border-right: 1px solid var(--line);
+  padding: 22px 18px;
+}
+
+.entry-door-quick-specs article:last-child {
+  border-right: 0;
+}
+
+.entry-door-quick-specs span {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.entry-door-quick-specs strong {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.entry-door-content {
+  display: grid;
+  gap: 24px;
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto 56px;
+}
+
+.entry-door-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: clamp(24px, 3vw, 34px);
+  box-shadow: 0 12px 28px rgba(8, 34, 18, 0.05);
+}
+
+.entry-door-panel h2 {
+  margin-bottom: 14px;
+  font-size: clamp(26px, 2.4vw, 36px);
+}
+
+.entry-door-panel p {
+  max-width: 900px;
+  color: #55625b;
+  line-height: 1.7;
+}
+
+.entry-door-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.entry-door-tags li {
+  border: 1px solid #cae1d2;
+  border-radius: 999px;
+  background: #f4faf6;
+  color: #17462a;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 9px 14px;
+}
+
+.entry-door-table {
+  display: grid;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.entry-door-table div {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  border-bottom: 1px solid var(--line);
+}
+
+.entry-door-table div:last-child {
+  border-bottom: 0;
+}
+
+.entry-door-table strong,
+.entry-door-table span {
+  padding: 14px 18px;
+  line-height: 1.45;
+}
+
+.entry-door-table strong {
+  background: #f4faf6;
+  color: var(--green-dark);
+}
+
+.entry-door-table span {
+  color: #4f5a54;
+}
+
+.entry-door-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.entry-door-media-panel {
+  padding: clamp(24px, 2.4vw, 30px);
+}
+
+.entry-door-image-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.entry-door-image-grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.entry-door-image-grid.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.entry-door-image-grid article {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.entry-door-image-grid div {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--green-soft);
+}
+
+.entry-door-image-grid.factory-scenes div {
+  aspect-ratio: 3 / 2;
+}
+
+.entry-door-image-grid img {
+  object-fit: cover;
+}
+
+.entry-door-image-grid h3 {
+  padding: 12px 14px 13px;
+  font-size: 16px;
+}
+
+.entry-door-inquiry {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #06461f, #0d7732);
+  color: #fff;
+}
+
+.entry-door-inquiry h2,
+.entry-door-inquiry p {
+  color: #fff;
+}
+
+.entry-door-inquiry p {
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.entry-door-inquiry .detail-actions {
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.entry-door-related {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.entry-door-related a {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.entry-door-related a > div {
+  position: relative;
+  aspect-ratio: 1.55;
+  background: var(--green-soft);
+}
+
+.entry-door-related img {
+  object-fit: cover;
+}
+
+.entry-door-related span {
+  padding: 18px 18px 8px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.entry-door-related strong {
+  padding: 0 18px 18px;
+  color: var(--green);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
 .product-spec-section {
   padding-top: 40px;
 }
@@ -1919,8 +2251,26 @@ p {
 
   .products-layout,
   .about-section,
-  .product-detail-layout {
+  .product-detail-layout,
+  .entry-door-top {
     grid-template-columns: 1fr;
+  }
+
+  .entry-door-quick-specs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .entry-door-quick-specs article:nth-child(3) {
+    border-right: 0;
+  }
+
+  .entry-door-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-door-image-grid.three,
+  .entry-door-image-grid.four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .products-sidebar {
@@ -1987,6 +2337,10 @@ p {
     .quote-cards,
     .quote-fields,
     .quote-benefits,
+    .entry-door-quick-specs,
+    .entry-door-image-grid.three,
+    .entry-door-image-grid.four,
+    .entry-door-related,
   .global-footer,
   .site-footer,
   .advantage-grid {
@@ -2003,9 +2357,12 @@ p {
 
   .products-hero > div,
   .product-detail-hero > div,
+  .entry-door-hero-inner,
+  .entry-door-content,
   .products-layout,
   .product-detail-layout,
-  .products-benefits {
+  .products-benefits,
+  .entry-door-quick-specs {
     width: calc(100% - 28px);
   }
 
@@ -2014,9 +2371,54 @@ p {
   }
 
   .products-hero h1,
-  .product-detail-hero h1 {
+  .product-detail-hero h1,
+  .entry-door-copy h1 {
     font-size: 38px;
     line-height: 1.05;
+  }
+
+  .entry-door-hero-inner {
+    padding: 36px 0 48px;
+  }
+
+  .entry-door-top {
+    gap: 24px;
+  }
+
+  .entry-door-carousel-stage {
+    aspect-ratio: 1.05;
+  }
+
+  .entry-door-quick-specs {
+    margin: -24px auto 36px;
+  }
+
+  .entry-door-quick-specs article,
+  .entry-door-quick-specs article:nth-child(3) {
+    min-height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .entry-door-quick-specs article:last-child {
+    border-bottom: 0;
+  }
+
+  .entry-door-table div {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-door-table strong {
+    padding-bottom: 6px;
+  }
+
+  .entry-door-table span {
+    padding-top: 6px;
+  }
+
+  .entry-door-inquiry {
+    display: grid;
+    align-items: stretch;
   }
 
   .products-hero h2 {

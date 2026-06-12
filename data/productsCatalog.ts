@@ -150,10 +150,15 @@ export const productsCatalog: ProductItem[] = [
     category: "Entry Door",
     subtitle: "Secure entry doors for residential building projects.",
     description:
-      "Entry doors for houses, villas and building projects, with options for size, finish, hardware and packaging.",
+      "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
     image: "/images/slide-entry-door.webp",
-    gallery: ["/images/slide-entry-door.webp", "/images/entry-door.webp"],
-    highlights: ["Secure structure", "Custom finishes", "Project packaging support"],
+    gallery: [
+      "/images/slide-entry-door.webp",
+      "/images/entry-door.webp",
+      "/images/aluminum-window.webp",
+      "/images/privacy-screen.webp",
+    ],
+    highlights: ["Security structure", "Custom size", "Weather resistant", "OEM & ODM support"],
     applications: ["Residential", "Commercial & Hospitality"],
     materials: ["Galvanized Steel", "Aluminum"],
     customization: ["Custom Size", "Custom Color", "Packaging"],

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import SiteHeader from "@/components/SiteHeader";
+import EntryDoorDetailPage from "@/components/EntryDoorDetailPage";
 import { ReadyProjectCta, SiteFooter } from "@/components/FooterSections";
+import SiteHeader from "@/components/SiteHeader";
 import { getProductBySlug, inquiryText, productsCatalog } from "@/data/productsCatalog";
 
 type ProductDetailProps = {
@@ -29,6 +30,10 @@ export default async function ProductDetailPage({ params }: ProductDetailProps) 
 
   if (!product) {
     notFound();
+  }
+
+  if (product.slug === "entry-door") {
+    return <EntryDoorDetailPage />;
   }
 
   return (
