@@ -9,7 +9,7 @@ import { shedProducts } from "./sheds";
 import type { ProductItem } from "./types";
 import { windowProducts } from "./windows";
 
-export type { DoorProduct, ProductItem, ResponsiveImage } from "./types";
+export type { DoorProduct, ProductItem } from "./types";
 export { doorProducts, getDoorProductBySlug } from "./doors";
 
 export const productsCatalog: ProductItem[] = [

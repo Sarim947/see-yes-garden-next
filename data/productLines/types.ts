@@ -1,10 +1,3 @@
-export type ResponsiveImage =
-  | string
-  | {
-      desktop: string;
-      mobile?: string;
-    };
-
 export type ProductItem = {
   slug: string;
   title: string;
@@ -12,8 +5,7 @@ export type ProductItem = {
   subtitle: string;
   description: string;
   image: string;
-  mobileImage?: string;
-  gallery: ResponsiveImage[];
+  gallery: string[];
   highlights: string[];
   applications: string[];
   materials: string[];
@@ -26,7 +18,6 @@ export type DoorProduct = ProductItem & {
   category: "Entry Door";
   template: "door";
   cardImage: string;
-  mobileCardImage?: string;
   quickSpecs: string[][];
   overview: string;
   parameters: string[][];

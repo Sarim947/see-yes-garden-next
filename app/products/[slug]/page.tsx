@@ -25,10 +25,6 @@ function inquiryHref(product: NonNullable<ReturnType<typeof getProductBySlug>>, 
   return `/${target}?${params.toString()}${target === "contact" ? "#inquiry" : ""}`;
 }
 
-function productImageSrc(image: string | { desktop: string; mobile?: string }) {
-  return typeof image === "string" ? image : image.desktop;
-}
-
 export default async function ProductDetailPage({ params }: ProductDetailProps) {
   const { slug } = await params;
   const product = getProductBySlug(slug);
@@ -67,8 +63,8 @@ export default async function ProductDetailPage({ params }: ProductDetailProps) 
           </div>
           <div className="product-thumbs">
             {product.gallery.map((image) => (
-              <div key={productImageSrc(image)}>
-                <Image src={productImageSrc(image)} alt={product.title} fill sizes="140px" />
+              <div key={image}>
+                <Image src={image} alt={product.title} fill sizes="140px" />
               </div>
             ))}
           </div>
