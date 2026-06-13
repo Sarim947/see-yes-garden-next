@@ -146,7 +146,7 @@ export const productsCatalog: ProductItem[] = [
     oemSupport: ["Private Label", "Packaging", "Sample Development"],
   },
   {
-    slug: "pivot-door-wood-like-finish",
+    slug: "entry-door",
     title: "Pivot Door SED-01",
     category: "Pivot Door",
     subtitle: "Secure pivot doors for residential building projects.",
