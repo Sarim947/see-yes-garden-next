@@ -2,14 +2,14 @@ import Image from "next/image";
 import EntryDoorCarousel from "@/components/EntryDoorCarousel";
 import { SiteFooter } from "@/components/FooterSections";
 import SiteHeader from "@/components/SiteHeader";
-import { entryDoorPage } from "@/data/entryDoorPage";
+import type { DoorProduct } from "@/data/productLines";
 
-function entryDoorInquiryHref(label: string, target: "contact" | "quote") {
+function entryDoorInquiryHref(product: DoorProduct, label: string, target: "contact" | "quote") {
   const params = new URLSearchParams({
     product: label,
-    category: entryDoorPage.category,
-    link: entryDoorPage.productPath,
-    message: [`I am interested in your ${label}.`, `Product link: ${entryDoorPage.productPath}`, `Category: ${entryDoorPage.category}`].join(
+    category: product.category,
+    link: `/products/${product.slug}`,
+    message: [`I am interested in your ${label}.`, `Product link: /products/${product.slug}`, `Category: ${product.category}`].join(
       "\n",
     ),
   });
@@ -17,7 +17,7 @@ function entryDoorInquiryHref(label: string, target: "contact" | "quote") {
   return `/${target}?${params.toString()}${target === "contact" ? "#inquiry" : ""}`;
 }
 
-export default function EntryDoorDetailPage() {
+export default function EntryDoorDetailPage({ product }: { product: DoorProduct }) {
   return (
     <main>
       <SiteHeader />
@@ -29,22 +29,22 @@ export default function EntryDoorDetailPage() {
             <span>/</span>
             <a href="/products">Products</a>
             <span>/</span>
-            <span>{entryDoorPage.category}</span>
+            <span>{product.category}</span>
           </nav>
 
           <div className="entry-door-top">
-            <EntryDoorCarousel images={entryDoorPage.gallery} title={entryDoorPage.productName} />
+            <EntryDoorCarousel images={product.gallery} title={product.title} />
 
             <div className="entry-door-copy">
-              <p className="eyebrow">{entryDoorPage.category}</p>
-              <h1>{entryDoorPage.productName}</h1>
-              <p>{entryDoorPage.subtitle}</p>
+              <p className="eyebrow">{product.category}</p>
+              <h1>{product.title}</h1>
+              <p>{product.description}</p>
               <ul className="detail-check-list">
-                {entryDoorPage.highlights.map((item) => (
+                {product.highlights.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              <a className="primary-btn" href={entryDoorInquiryHref(entryDoorPage.category, "quote")}>
+              <a className="primary-btn" href={entryDoorInquiryHref(product, product.category, "quote")}>
                 Get Quote
               </a>
             </div>
@@ -53,7 +53,7 @@ export default function EntryDoorDetailPage() {
       </section>
 
       <section className="entry-door-quick-specs">
-        {entryDoorPage.quickSpecs.map(([title, text]) => (
+        {product.quickSpecs.map(([title, text]) => (
           <article key={title}>
             <span>{title}</span>
             <strong>{text}</strong>
@@ -64,13 +64,13 @@ export default function EntryDoorDetailPage() {
       <section className="entry-door-content">
         <article className="entry-door-panel">
           <h2>Product Overview</h2>
-          <p>{entryDoorPage.overview}</p>
+          <p>{product.overview}</p>
         </article>
 
         <article className="entry-door-panel">
           <h2>Technical Parameters</h2>
           <div className="entry-door-table">
-            {entryDoorPage.parameters.map(([label, value]) => (
+            {product.parameters.map(([label, value]) => (
               <div key={label}>
                 <strong>{label}</strong>
                 <span>{value}</span>
@@ -82,7 +82,7 @@ export default function EntryDoorDetailPage() {
         <article className="entry-door-panel entry-door-media-panel">
           <h2>Application Scenes</h2>
           <div className="entry-door-image-grid three application-scenes">
-            {entryDoorPage.applications.map((item) => (
+            {product.applicationScenes.map((item) => (
               <article key={item.title}>
                 <div>
                   <Image src={item.image} alt={item.title} fill sizes="(max-width: 900px) 100vw, 360px" />
@@ -96,7 +96,7 @@ export default function EntryDoorDetailPage() {
         <article className="entry-door-panel entry-door-media-panel">
           <h2>Factory & Quality Control</h2>
           <div className="entry-door-image-grid four factory-scenes">
-            {entryDoorPage.factorySteps.map((item) => (
+            {product.factorySteps.map((item) => (
               <article key={item.title}>
                 <div>
                   <Image src={item.image} alt={item.title} fill sizes="(max-width: 900px) 100vw, 260px" />
@@ -110,7 +110,7 @@ export default function EntryDoorDetailPage() {
         <article className="entry-door-panel">
           <h2>Frequently Asked Questions</h2>
           <div className="faq-list">
-            {entryDoorPage.faqs.map(([question, answer]) => (
+            {product.faqs.map(([question, answer]) => (
               <details key={question}>
                 <summary>{question}</summary>
                 <p>{answer}</p>
@@ -123,15 +123,15 @@ export default function EntryDoorDetailPage() {
           <div>
             <h2>Send Entry Door Inquiry</h2>
             <p>
-              We will include “I am interested in your Entry Door. Product link: /products/entry-door” in the form, so
+              We will include “I am interested in your {product.title}. Product link: /products/{product.slug}” in the form, so
               your customer can request a quotation faster.
             </p>
           </div>
           <div className="detail-actions">
-            <a className="primary-btn" href={entryDoorInquiryHref(entryDoorPage.category, "contact")}>
+            <a className="primary-btn" href={entryDoorInquiryHref(product, product.title, "contact")}>
               Send Inquiry
             </a>
-            <a className="secondary-green" href={entryDoorInquiryHref(entryDoorPage.category, "quote")}>
+            <a className="secondary-green" href={entryDoorInquiryHref(product, product.title, "quote")}>
               Get Quote
             </a>
           </div>
@@ -140,8 +140,8 @@ export default function EntryDoorDetailPage() {
         <article className="entry-door-panel">
           <h2>Related Products</h2>
           <div className="entry-door-related">
-            {entryDoorPage.relatedProducts.map((item) => (
-              <a key={item.title} href={entryDoorInquiryHref(item.title, "quote")}>
+            {product.relatedProducts.map((item) => (
+              <a key={item.title} href={entryDoorInquiryHref(product, item.title, "quote")}>
                 <div>
                   <Image src={item.image} alt={item.title} fill sizes="(max-width: 900px) 100vw, 320px" />
                 </div>

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import EntryDoorDetailPage from "@/components/EntryDoorDetailPage";
 import { ReadyProjectCta, SiteFooter } from "@/components/FooterSections";
 import SiteHeader from "@/components/SiteHeader";
+import { getDoorProductBySlug } from "@/data/productLines";
 import { getProductBySlug, inquiryText, productsCatalog } from "@/data/productsCatalog";
 
 type ProductDetailProps = {
@@ -31,13 +32,14 @@ function productImageSrc(image: string | { desktop: string; mobile?: string }) {
 export default async function ProductDetailPage({ params }: ProductDetailProps) {
   const { slug } = await params;
   const product = getProductBySlug(slug);
+  const doorProduct = getDoorProductBySlug(slug);
+
+  if (doorProduct) {
+    return <EntryDoorDetailPage product={doorProduct} />;
+  }
 
   if (!product) {
     notFound();
-  }
-
-  if (product.slug === "entry-door") {
-    return <EntryDoorDetailPage />;
   }
 
   return (
