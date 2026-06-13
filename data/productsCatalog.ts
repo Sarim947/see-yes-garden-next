@@ -146,6 +146,72 @@ export const productsCatalog: ProductItem[] = [
     oemSupport: ["Private Label", "Packaging", "Sample Development"],
   },
   {
+    slug: "pivot-door-wood-like-finish",
+    title: "Pivot Door SED-01",
+    category: "Pivot Door",
+    subtitle: "Secure pivot doors for residential building projects.",
+    description:
+      "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
+    image: "/images/products/pivot-door/product-card/pivot-door-card-desktop.jpg",
+    mobileImage: "/images/products/pivot-door/product-card/pivot-door-card-mobile.jpg",
+    gallery: [
+      {
+        desktop: "/images/products/pivot-door/detail-carousel/desktop/01-scene-main.jpg",
+        mobile: "/images/products/pivot-door/detail-carousel/mobile/01-scene-main-mobile.jpg",
+      },
+      {
+        desktop: "/images/products/pivot-door/detail-carousel/desktop/02-white-main.jpg",
+        mobile: "/images/products/pivot-door/detail-carousel/mobile/02-white-main-mobile.jpg",
+      },
+      {
+        desktop: "/images/products/pivot-door/detail-carousel/desktop/03-pivot-structure.jpg",
+        mobile: "/images/products/pivot-door/detail-carousel/mobile/03-pivot-structure-mobile.jpg",
+      },
+      {
+        desktop: "/images/products/pivot-door/detail-carousel/desktop/04-pivot-hardware.jpg",
+        mobile: "/images/products/pivot-door/detail-carousel/mobile/04-pivot-hardware-mobile.jpg",
+      },
+    ],
+    highlights: ["Security structure", "Custom size", "Weather resistant", "OEM & ODM support"],
+    applications: ["Residential", "Commercial & Hospitality"],
+    materials: ["Galvanized Steel", "Aluminum"],
+    customization: ["Custom Size", "Custom Color", "Packaging"],
+    oemSupport: ["Private Label", "Packaging"],
+  },
+  {
+    slug: "entry-door",
+    title: "Entry Door",
+    category: "Entry Door",
+    subtitle: "Secure entry doors for residential building projects.",
+    description:
+      "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
+    image: "/images/products/pivot-door/product-card/pivot-door-card-desktop.jpg",
+    mobileImage: "/images/products/pivot-door/product-card/pivot-door-card-mobile.jpg",
+    gallery: [
+      {
+        desktop: "/images/products/pivot-door/detail-carousel/desktop/01-scene-main.jpg",
+        mobile: "/images/products/pivot-door/detail-carousel/mobile/01-scene-main-mobile.jpg",
+      },
+      {
+        desktop: "/images/products/pivot-door/detail-carousel/desktop/02-white-main.jpg",
+        mobile: "/images/products/pivot-door/detail-carousel/mobile/02-white-main-mobile.jpg",
+      },
+      {
+        desktop: "/images/products/pivot-door/detail-carousel/desktop/03-pivot-structure.jpg",
+        mobile: "/images/products/pivot-door/detail-carousel/mobile/03-pivot-structure-mobile.jpg",
+      },
+      {
+        desktop: "/images/products/pivot-door/detail-carousel/desktop/04-pivot-hardware.jpg",
+        mobile: "/images/products/pivot-door/detail-carousel/mobile/04-pivot-hardware-mobile.jpg",
+      },
+    ],
+    highlights: ["Security structure", "Custom size", "Weather resistant", "OEM & ODM support"],
+    applications: ["Residential", "Commercial & Hospitality"],
+    materials: ["Galvanized Steel", "Aluminum"],
+    customization: ["Custom Size", "Custom Color", "Packaging"],
+    oemSupport: ["Private Label", "Packaging"],
+  },
+  {
     slug: "entry-door",
     title: "Entry Door",
     category: "Entry Door",
