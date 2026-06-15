@@ -52,7 +52,7 @@ export const raisedGardenBedProducts: ProductItem[] = [
       ["Item Number", "FC-C4C"],
       ["Product Name", "Metal Raised Garden Bed"],
       ["Material", "Galvanized Steel"],
-      ["Overall Size", "200x60x45cm or Customized"],
+      ["Overall Size", "30x30x30cm or Customized"],
       ["Color", "Customized"],
       ["Packing", "Carton"],
     ],
@@ -118,7 +118,7 @@ export const raisedGardenBedProducts: ProductItem[] = [
     image: "/images/products/raised-garden-bed/raised-garden-bed-fc-p4c4j/product-card/card.webp",
     // 必改：详情页顶部轮播图，只保留一套图片，手机和电脑共用。
     gallery: [
-      "/images/products/raised-garden-bed/raised-garden-bed-fc-p4c4j/detail-carousel/01-main.webp",
+      "/images/products/raised-garden-bed/raised-garden-bed-fc-p4c4j/detail-carousel/P4C4J.webp",
       "/images/products/raised-garden-bed/raised-garden-bed-fc-p4c4j/detail-carousel/detail1.webp",
       "/images/products/raised-garden-bed/raised-garden-bed-fc-p4c4j/detail-carousel/detail2.webp",
       "/images/products/raised-garden-bed/raised-garden-bed-fc-p4c4j/detail-carousel/detail3.webp",
@@ -138,7 +138,7 @@ export const raisedGardenBedProducts: ProductItem[] = [
       ["Item Number", "FC-P4C4J"],
       ["Product Name", "Metal Raised Garden Bed"],
       ["Material", "Galvanized Steel"],
-      ["Overall Size", "200x60x45cm or Customized"],
+      ["Overall Size", "90x90x30cm or Customized"],
       ["Color", "Customized"],
       ["Packing", "Carton"],
     ],
@@ -169,7 +169,7 @@ export const raisedGardenBedProducts: ProductItem[] = [
     relatedProducts: [
       {
         title: "FC-P4C4J Raised Garden Bed",
-        image: "/images/products/raised-garden-bed/raised-garden-bed-fc-p4c4j/related-products/FC-P4C4J.webp",
+        image: "/images/products/raised-garden-bed/raised-garden-bed-fc-p4c4j/related-products/fc-c4c.webp",
         slug: "raised-garden-bed-fc-p4c4j",
       },
       {
