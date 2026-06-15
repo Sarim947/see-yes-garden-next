@@ -12,6 +12,13 @@ export type ProductItem = {
   customization: string[];
   oemSupport: string[];
   template?: "standard" | "door";
+  productDescription?: string[][];
+  faqs?: string[][];
+  relatedProducts?: Array<{
+    title: string;
+    image: string;
+    slug?: string;
+  }>;
 };
 
 export type DoorProduct = ProductItem & {
@@ -33,5 +40,6 @@ export type DoorProduct = ProductItem & {
   relatedProducts: Array<{
     title: string;
     image: string;
+    slug?: string;
   }>;
 };

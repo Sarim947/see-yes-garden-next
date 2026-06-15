@@ -10,7 +10,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "Raised Garden Beds",
     slug: "raised-garden-beds",
-    image: "/images/product-garden-bed.png",
+    image: "/images/products/raised-garden-bed/raised-garden-bed/product-card/card.png",
     icon: "/images/icons/garden-bed.webp",
     summary: "Galvanized metal garden beds for home, farm and commercial use.",
   },
@@ -150,7 +150,7 @@ export const manufacturingCards = [
 export const heroSlides = [
   {
     title: "garden bed",
-    image: "/images/slide-garden-bed.jpg",
+    image: "/images/products/raised-garden-bed/raised-garden-bed/detail-carousel/01-main.jpg",
   },
   {
     title: "tool shed",

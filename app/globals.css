@@ -2118,6 +2118,51 @@ p {
   padding-top: 40px;
 }
 
+.product-detail-extra {
+  display: grid;
+  gap: 28px;
+  width: min(1120px, calc(100% - 64px));
+  margin: 0 auto 72px;
+}
+
+.product-detail-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.product-detail-panel h2 {
+  margin: 0;
+  color: #52647c;
+  font-size: clamp(26px, 2.5vw, 34px);
+  font-weight: 500;
+}
+
+.product-description-table {
+  border-top: 1px solid #bfc5cc;
+  border-left: 1px solid #d2d6db;
+  background: #fff;
+}
+
+.product-description-table div {
+  display: grid;
+  grid-template-columns: minmax(180px, 38%) minmax(0, 1fr);
+  border-right: 1px solid #d2d6db;
+  border-bottom: 1px solid #d2d6db;
+}
+
+.product-description-table strong,
+.product-description-table span {
+  padding: 10px 14px;
+  color: #111;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.product-description-table strong {
+  border-right: 1px solid #d2d6db;
+  font-weight: 500;
+}
+
 .spec-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2428,6 +2473,16 @@ p {
 
   .entry-door-table span {
     padding-top: 6px;
+  }
+
+  .product-description-table div {
+    grid-template-columns: 1fr;
+  }
+
+  .product-description-table strong {
+    border-right: 0;
+    border-bottom: 1px solid #d2d6db;
+    background: #f7f8f8;
   }
 
   .entry-door-inquiry {

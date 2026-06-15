@@ -110,6 +110,55 @@ export default async function ProductDetailPage({ params }: ProductDetailProps) 
         </div>
       </section>
 
+      {(product.productDescription || product.faqs || product.relatedProducts) && (
+        <section className="product-detail-extra">
+          {product.productDescription && (
+            <article className="product-detail-panel">
+              <h2>Product Description</h2>
+              <div className="product-description-table">
+                {product.productDescription.map(([label, value]) => (
+                  <div key={label}>
+                    <strong>{label}</strong>
+                    <span>{value}</span>
+                  </div>
+                ))}
+              </div>
+            </article>
+          )}
+
+          {product.faqs && (
+            <article className="product-detail-panel">
+              <h2>Frequently Asked Questions</h2>
+              <div className="faq-list">
+                {product.faqs.map(([question, answer]) => (
+                  <details key={question}>
+                    <summary>{question}</summary>
+                    <p>{answer}</p>
+                  </details>
+                ))}
+              </div>
+            </article>
+          )}
+
+          {product.relatedProducts && (
+            <article className="product-detail-panel">
+              <h2>Related Products</h2>
+              <div className="entry-door-related">
+                {product.relatedProducts.map((item) => (
+                  <a key={item.title} href={`/products/${item.slug ?? product.slug}`}>
+                    <div>
+                      <Image src={item.image} alt={item.title} fill sizes="(max-width: 900px) 100vw, 320px" />
+                    </div>
+                    <span>{item.title}</span>
+                    <strong>View Detail</strong>
+                  </a>
+                ))}
+              </div>
+            </article>
+          )}
+        </section>
+      )}
+
       <ReadyProjectCta />
       <SiteFooter />
     </main>
