@@ -17,13 +17,13 @@ Raised Garden Bed 统一这样管理：
 例子：
 
 ```text
-raised-garden-bed-rgb-02
+raised-garden-bed-fc-c4c
 ```
 
 以后页面地址就是：
 
 ```text
-/products/raised-garden-bed-rgb-02
+/products/raised-garden-bed-fc-c4c
 ```
 
 要求：
@@ -46,7 +46,7 @@ public/images/products/raised-garden-bed/
 例子：
 
 ```text
-public/images/products/raised-garden-bed/raised-garden-bed-rgb-02/
+public/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/
 ```
 
 然后在这个产品文件夹里新建 5 个小文件夹：
@@ -62,7 +62,7 @@ source/
 最后结构应该像这样：
 
 ```text
-public/images/products/raised-garden-bed/raised-garden-bed-rgb-02/
+public/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/
   product-card/
   detail-carousel/
   application-scenes/
@@ -77,7 +77,7 @@ public/images/products/raised-garden-bed/raised-garden-bed-rgb-02/
 放到：
 
 ```text
-public/images/products/raised-garden-bed/raised-garden-bed-rgb-02/product-card/
+public/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/product-card/
 ```
 
 建议命名：
@@ -103,7 +103,7 @@ card.jpg
 放到：
 
 ```text
-public/images/products/raised-garden-bed/raised-garden-bed-rgb-02/detail-carousel/
+public/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/detail-carousel/
 ```
 
 建议命名：
@@ -133,7 +133,7 @@ public/images/products/raised-garden-bed/raised-garden-bed-rgb-02/detail-carouse
 放到：
 
 ```text
-public/images/products/raised-garden-bed/raised-garden-bed-rgb-02/application-scenes/
+public/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/application-scenes/
 ```
 
 建议命名：
@@ -155,7 +155,7 @@ public/images/products/raised-garden-bed/raised-garden-bed-rgb-02/application-sc
 放到：
 
 ```text
-public/images/products/raised-garden-bed/raised-garden-bed-rgb-02/related-products/
+public/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/related-products/
 ```
 
 建议命名：
@@ -243,10 +243,26 @@ Command+V
 
 ## 第 6 步：改产品基本信息
 
+先在刚粘贴的新产品块里，用查找替换把示范型号全部换成新型号。
+
+查找：
+
+```text
+raised-garden-bed-fc-c4c
+```
+
+替换成你的新型号 `slug`，例如：
+
+```text
+raised-garden-bed-fc-p4c4j
+```
+
+这样图片路径会一起改掉。不要在文件顶部新增 `const xxxAssetPath`，所有图片路径都放在产品块里面。
+
 ### 改 slug
 
 ```ts
-slug: "raised-garden-bed-rgb-02",
+slug: "raised-garden-bed-fc-c4c",
 ```
 
 这里必须和你的图片文件夹名字一致。
@@ -254,7 +270,7 @@ slug: "raised-garden-bed-rgb-02",
 ### 改 title
 
 ```ts
-title: "Raised Garden Bed RGB-02",
+title: "Raised Garden Bed FC-C4C",
 ```
 
 这是页面大标题。
@@ -294,7 +310,7 @@ image: "...",
 改成你的新图片：
 
 ```ts
-image: "/images/products/raised-garden-bed/raised-garden-bed-rgb-02/product-card/card.jpg",
+image: "/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/product-card/card.webp",
 ```
 
 注意：
@@ -319,9 +335,9 @@ gallery: [
 
 ```ts
 gallery: [
-  "/images/products/raised-garden-bed/raised-garden-bed-rgb-02/detail-carousel/01-main.jpg",
-  "/images/products/raised-garden-bed/raised-garden-bed-rgb-02/detail-carousel/02-detail.jpg",
-  "/images/products/raised-garden-bed/raised-garden-bed-rgb-02/detail-carousel/03-scene.jpg",
+  "/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/detail-carousel/01-main.webp",
+  "/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/detail-carousel/02-detail.jpg",
+  "/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/detail-carousel/03-scene.jpg",
 ],
 ```
 
@@ -441,17 +457,17 @@ relatedProducts: [
 relatedProducts: [
   {
     title: "Modular Raised Garden Bed",
-    image: "/images/products/raised-garden-bed/raised-garden-bed-rgb-02/related-products/01-related.jpg",
+    image: "/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/related-products/01-related.jpg",
     slug: "modular-raised-garden-bed",
   },
   {
     title: "Residential Garden Bed",
-    image: "/images/products/raised-garden-bed/raised-garden-bed-rgb-02/related-products/02-related.jpg",
+    image: "/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/related-products/02-related.jpg",
     slug: "residential-raised-garden-bed",
   },
   {
     title: "Landscape Garden Bed",
-    image: "/images/products/raised-garden-bed/raised-garden-bed-rgb-02/related-products/03-related.jpg",
+    image: "/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/related-products/03-related.jpg",
     slug: "landscape-raised-garden-bed",
   },
 ],
@@ -486,7 +502,7 @@ npm run dev
 然后访问你的产品页面：
 
 ```text
-/products/raised-garden-bed-rgb-02
+/products/raised-garden-bed-fc-c4c
 ```
 
 ## 第 15 步：检查这 7 件事
@@ -522,13 +538,13 @@ card.jpg
 代码里写：
 
 ```ts
-slug: "raised-garden-bed-rgb-02",
+slug: "raised-garden-bed-fc-c4c",
 ```
 
 图片路径也必须写：
 
 ```text
-/images/products/raised-garden-bed/raised-garden-bed-rgb-02/
+/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/
 ```
 
 ### 图片链接不要写电脑路径
