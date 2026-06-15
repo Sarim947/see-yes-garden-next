@@ -150,7 +150,7 @@ export const manufacturingCards = [
 export const heroSlides = [
   {
     title: "garden bed",
-    image: "/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/detail-carousel/01-main.webp",
+    image: "/images/slide-garden-bed.jpg",
   },
   {
     title: "tool shed",
@@ -174,7 +174,7 @@ export const heroSlides = [
   },
   {
     title: "entry steel door",
-    image: "/images/products/entry-door/pivot-door-SED-01/detail-carousel/desktop/01-scene-main.jpg",
+    image: "/images/slide-entry-door.webp",
   },
   {
     title: "aluminum window",
