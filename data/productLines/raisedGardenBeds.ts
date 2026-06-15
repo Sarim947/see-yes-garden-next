@@ -12,15 +12,15 @@ import type { ProductItem } from "./types";
   5. 图片链接必须以 /images/products/raised-garden-bed/产品型号slug/ 开头，不能写电脑本地完整路径。
 */
 
-const rgb02AssetPath = "/images/products/raised-garden-bed/raised-garden-bed/raised-garden-bed-rgb-02-fc-c4c";
+const fcC4cAssetPath = "/images/products/raised-garden-bed/raised-garden-bed/raised-garden-bed-fc-c4c";
 
 export const raisedGardenBedProducts: ProductItem[] = [
   {
     // ===== 复制产品块开始：新增产品时，从这一行的 { 开始复制，到下面“复制产品块结束”的 }, 结束 =====
-    // 必改：产品页面地址，不能和其他产品重复。例：raised-garden-bed-rgb-02
-    slug: "raised-garden-bed-rgb-02-fc-c4c",
+    // 必改：产品页面地址，不能和其他产品重复。例：raised-garden-bed-fc-c4c
+    slug: "raised-garden-bed-fc-c4c",
     // 必改：产品标题，会显示在产品卡片和详情页顶部。
-    title: "Raised Garden Bed RGB-02 FC-C4C",
+    title: "Raised Garden Bed FC-C4C",
     // 固定：Raised Garden Bed 品类不要改。
     category: "Raised Garden Bed",
     // 固定：当前 Raised Garden Bed 使用标准详情页模板，不要改。
@@ -31,13 +31,13 @@ export const raisedGardenBedProducts: ProductItem[] = [
     description:
       "Factory direct raised garden bed solution for home gardens, retail channels and landscape projects, with options for size, color, panel style, carton packing and private label support.",
     // 必改：产品卡片图，只需要这一张，手机和电脑共用。
-    image: `${rgb02AssetPath}/product-card/card.webp`,
+    image: `${fcC4cAssetPath}/product-card/card.webp`,
     // 必改：详情页顶部轮播图，只保留一套图片，手机和电脑共用。
     gallery: [
-      `${rgb02AssetPath}/detail-carousel/01-main.webp`,
-      `${rgb02AssetPath}/detail-carousel/detail1.webp`,
-      `${rgb02AssetPath}/detail-carousel/detail2.webp`,
-      `${rgb02AssetPath}/detail-carousel/detail3.webp`,
+      `${fcC4cAssetPath}/detail-carousel/01-main.webp`,
+      `${fcC4cAssetPath}/detail-carousel/detail1.webp`,
+      `${fcC4cAssetPath}/detail-carousel/detail2.webp`,
+      `${fcC4cAssetPath}/detail-carousel/detail3.webp`,
     ],
     // 可改：产品卡片下面的 3 个卖点会优先显示这里的前三项。
     highlights: ["Galvanized steel", "Custom size", "Retail carton packaging", "OEM & ODM support"],
@@ -51,7 +51,7 @@ export const raisedGardenBedProducts: ProductItem[] = [
     oemSupport: ["Private Label", "Packaging"],
     // 可改：详情页 Product Description 表格，左边是参数名，右边是参数内容。
     productDescription: [
-      ["Item Number", "RGB-02 FC-C4C"],
+      ["Item Number", "FC-C4C"],
       ["Product Name", "Metal Raised Garden Bed"],
       ["Material", "Galvanized Steel"],
       ["Overall Size", "200x60x45cm or Customized"],
@@ -85,18 +85,18 @@ export const raisedGardenBedProducts: ProductItem[] = [
     relatedProducts: [
       {
         title: "FC-P4C4J Raised Garden Bed",
-        image: `${rgb02AssetPath}/related-products/FC-P4C4J.webp`,
-        slug: "raised-garden-bed-rgb-02-fc-c4c",
+        image: `${fcC4cAssetPath}/related-products/FC-P4C4J.webp`,
+        slug: "raised-garden-bed-fc-c4c",
       },
       {
         title: "FC-P4C4Y Raised Garden Bed",
-        image: `${rgb02AssetPath}/related-products/FC-P4C4Y.webp`,
-        slug: "raised-garden-bed-rgb-02-fc-c4c",
+        image: `${fcC4cAssetPath}/related-products/FC-P4C4Y.webp`,
+        slug: "raised-garden-bed-fc-c4c",
       },
       {
         title: "FC-P6R4J Raised Garden Bed",
-        image: `${rgb02AssetPath}/related-products/FC-P6R4J.webp`,
-        slug: "raised-garden-bed-rgb-02-fc-c4c",
+        image: `${fcC4cAssetPath}/related-products/FC-P6R4J.webp`,
+        slug: "raised-garden-bed-fc-c4c",
       },
     ],
     // ===== 复制产品块结束：新增产品时，复制到这一行下面的 }, 为止 =====
