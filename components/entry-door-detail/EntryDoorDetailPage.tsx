@@ -1,8 +1,8 @@
 import Image from "next/image";
-import EntryDoorCarousel from "@/components/EntryDoorCarousel";
 import { SiteFooter } from "@/components/FooterSections";
 import SiteHeader from "@/components/SiteHeader";
 import type { DoorProduct } from "@/data/productLines";
+import EntryDoorCarousel from "./EntryDoorCarousel";
 
 function entryDoorInquiryHref(product: DoorProduct, label: string, target: "contact" | "quote") {
   const params = new URLSearchParams({

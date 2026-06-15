@@ -1,7 +1,20 @@
 import type { DoorProduct } from "./types";
 
+/*
+  Entry Door 上新说明：
+
+  1. 详细步骤看：docs/add-entry-door-product.md
+  2. 新产品只需要做两件事：
+     - 把图片放进 public/images/products/entry-door/产品型号slug/ 文件夹。
+     - 在下面 doorProducts 数组里复制一个完整产品块，然后修改文字和图片链接。
+  3. category 固定写 "Entry Door"，template 固定写 "door"，不要改。
+  4. 图片文件夹只放图片，不放说明文档、不放代码。
+  5. 图片链接必须以 /images/products/entry-door/产品型号slug/ 开头，不能写电脑本地完整路径。
+*/
+
 export const doorProducts: DoorProduct[] = [
   {
+    // ===== 复制产品块开始：新增产品时，从这一行的 { 开始复制，到下面“复制产品块结束”的 }, 结束 =====
     // 必改：产品页面地址，不能和其他产品重复。例：pivot-door-sed-02
     slug: "pivot-door-sed-01",
     // 必改：产品标题，会显示在产品卡片和详情页顶部。
@@ -14,14 +27,14 @@ export const doorProducts: DoorProduct[] = [
     description:
       "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
     // 必改：二级 products 页面卡片图，只需要这一张，手机和电脑共用。
-    image: "/images/products/pivot-door/product-card/pivot-door-card-desktop.jpg",
-    cardImage: "/images/products/pivot-door/product-card/pivot-door-card-desktop.jpg",
+    image: "/images/products/entry-door/pivot-door-SED-01/product-card/pivot-door-card-desktop.jpg",
+    cardImage: "/images/products/entry-door/pivot-door-SED-01/product-card/pivot-door-card-desktop.jpg",
     // 必改：详情页顶部轮播图，只保留一套图片，手机和电脑共用。
     gallery: [
-      "/images/products/pivot-door/detail-carousel/desktop/01-scene-main.jpg",
-      "/images/products/pivot-door/detail-carousel/desktop/02-white-main.jpg",
-      "/images/products/pivot-door/detail-carousel/desktop/03-pivot-structure.webp",
-      "/images/products/pivot-door/detail-carousel/desktop/04-pivot-hardware.jpg",
+      "/images/products/entry-door/pivot-door-SED-01/detail-carousel/desktop/01-scene-main.jpg",
+      "/images/products/entry-door/pivot-door-SED-01/detail-carousel/desktop/02-white-main.jpg",
+      "/images/products/entry-door/pivot-door-SED-01/detail-carousel/desktop/03-pivot-structure.webp",
+      "/images/products/entry-door/pivot-door-SED-01/detail-carousel/desktop/04-pivot-hardware.jpg",
     ],
     // 可改：产品卡片下面的 3 个卖点会优先显示这里的前三项。
     highlights: ["Security structure", "Custom size", "Weather resistant", "OEM & ODM support"],
@@ -62,15 +75,15 @@ export const doorProducts: DoorProduct[] = [
     applicationScenes: [
       {
         title: "Office Workplace",
-        image: "/images/products/pivot-door/application-scenes/01-office-workplace-scene.jpg",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/01-office-workplace-scene.jpg",
       },
       {
         title: "Luxury Villa",
-        image: "/images/products/pivot-door/application-scenes/02-luxury-villa-scene.jpg",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/02-luxury-villa-scene.jpg",
       },
       {
         title: "Luxury Apartment",
-        image: "/images/products/pivot-door/application-scenes/03-luxury-apartment-scene.jpg",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/03-luxury-apartment-scene.jpg",
       },
     ],
     // 可改：工厂和质检图片。
@@ -119,17 +132,18 @@ export const doorProducts: DoorProduct[] = [
     relatedProducts: [
       {
         title: "Pivot Door",
-        image: "/images/products/pivot-door/related-products/pivot-door-related.jpg",
+        image: "/images/products/entry-door/pivot-door-SED-01/related-products/pivot-door-related.jpg",
       },
       {
         title: "Steel Door",
-        image: "/images/products/entry-door/related-products/02-aluminum-profile-door.webp",
+        image: "/images/products/entry-door/pivot-door-SED-01/related-products/aluminum-profile-door.webp",
       },
       {
         title: "Aluminum Glass Door",
-        image: "/images/products/pivot-door-SED-01/related-products/glass-door-related.webp",
+        image: "/images/products/entry-door/pivot-door-SED-01/related-products/glass-door-related.webp",
       },
     ],
+    // ===== 复制产品块结束：新增产品时，复制到这一行下面的 }, 为止 =====
   },
   {
     // 必改：产品页面地址，不能和其他产品重复。例：pivot-door-sed-02
@@ -144,14 +158,14 @@ export const doorProducts: DoorProduct[] = [
     description:
       "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
     // 必改：二级 products 页面卡片图，只需要这一张，手机和电脑共用。
-    image: "/images/products/aluminum-glass-door-SED-3808/product-card/01-scene-main.webp",
-    cardImage: "/images/products/aluminum-glass-door-SED-3808/product-card/01-scene-main.webp",
+    image: "/images/products/entry-door/aluminum-glass-door-SED-3808/product-card/01-scene-main.webp",
+    cardImage: "/images/products/entry-door/aluminum-glass-door-SED-3808/product-card/01-scene-main.webp",
     // 必改：详情页顶部轮播图，只保留一套图片，手机和电脑共用。
     gallery: [
-      "/images/products/aluminum-glass-door-SED-3808/detail-carousel/desktop/01-scene-main.webp",
-      "/images/products/aluminum-glass-door-SED-3808/detail-carousel/desktop/02-white-main.webp",
-      "/images/products/aluminum-glass-door-SED-3808/detail-carousel/desktop/03-alumium-structure.webp",
-      "/images/products/aluminum-glass-door-SED-3808/detail-carousel/desktop/04-aluminum-hardware.webp",
+      "/images/products/entry-door/aluminum-glass-door-SED-3808/detail-carousel/desktop/01-scene-main.webp",
+      "/images/products/entry-door/aluminum-glass-door-SED-3808/detail-carousel/desktop/02-white-main.webp",
+      "/images/products/entry-door/aluminum-glass-door-SED-3808/detail-carousel/desktop/03-alumium-structure.webp",
+      "/images/products/entry-door/aluminum-glass-door-SED-3808/detail-carousel/desktop/04-aluminum-hardware.webp",
     ],
     // 可改：产品卡片下面的 3 个卖点会优先显示这里的前三项。
     highlights: ["Security structure", "Custom size", "Weather resistant", "OEM & ODM support"],
@@ -192,15 +206,15 @@ export const doorProducts: DoorProduct[] = [
     applicationScenes: [
       {
         title: "Office Workplace",
-        image: "/images/products/pivot-door/application-scenes/01-office-workplace-scene.jpg",
+        image: "/images/products/entry-door/aluminum-glass-door-SED-3808/application-scenes/01-office-workplace-scene.jpg",
       },
       {
         title: "Luxury Villa",
-        image: "/images/products/pivot-door/application-scenes/02-luxury-villa-scene.jpg",
+        image: "/images/products/entry-door/aluminum-glass-door-SED-3808/application-scenes/02-luxury-villa-scene.jpg",
       },
       {
         title: "Luxury Apartment",
-        image: "/images/products/pivot-door/application-scenes/03-luxury-apartment-scene.jpg",
+        image: "/images/products/entry-door/aluminum-glass-door-SED-3808/application-scenes/03-luxury-apartment-scene.jpg",
       },
     ],
     // 可改：工厂和质检图片。
@@ -249,15 +263,15 @@ export const doorProducts: DoorProduct[] = [
     relatedProducts: [
       {
         title: "Pivot Door",
-        image: "/images/products/pivot-door/related-products/pivot-door-related.jpg",
+        image: "/images/products/entry-door/aluminum-glass-door-SED-3808/related-products/pivot-door-related.jpg",
       },
       {
         title: "Aluminum Profile Door",
-        image: "/images/products/entry-door/related-products/02-aluminum-profile-door.webp",
+        image: "/images/products/entry-door/aluminum-glass-door-SED-3808/related-products/aluminum-profile-door.webp",
       },
       {
         title: "Steel Door",
-        image: "/images/products/entry-door/related-products/03-steel-door.webp",
+        image: "/images/products/entry-door/aluminum-glass-door-SED-3808/related-products/steel-door.webp",
       },
     ],
   },

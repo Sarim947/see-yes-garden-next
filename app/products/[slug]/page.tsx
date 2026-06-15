@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import EntryDoorDetailPage from "@/components/EntryDoorDetailPage";
+import EntryDoorDetailPage from "@/components/entry-door-detail";
 import { ReadyProjectCta, SiteFooter } from "@/components/FooterSections";
 import SiteHeader from "@/components/SiteHeader";
 import { getDoorProductBySlug } from "@/data/productLines";
