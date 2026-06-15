@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import GoToTopButton from "@/components/GoToTopButton";
+import TradeShowFloatingCard from "@/components/TradeShowFloatingCard";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+        <TradeShowFloatingCard />
         <GoToTopButton />
         <script
           dangerouslySetInnerHTML={{
