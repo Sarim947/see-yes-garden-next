@@ -40,10 +40,7 @@ export default function Home() {
       <section className="section about-section" id="about">
         <div className="about-media">
           <video autoPlay controls loop muted playsInline preload="auto">
-            <source
-              src="https://seeyesgarden.com/wp-content/uploads/2026/06/seeyesgarden_factory.mp4"
-              type="video/mp4"
-            />
+            <source src="/videos/screen.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
