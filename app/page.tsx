@@ -39,10 +39,12 @@ export default function Home() {
 
       <section className="section about-section" id="about">
         <div className="about-media">
-          <video autoPlay controls loop muted playsInline preload="auto">
-            <source src="/videos/screen.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <iframe
+            src="https://drive.google.com/file/d/1oKFqUjKhz_OItQqaus8pf2QhYieyG_S1/preview"
+            title="SeeYes Garden factory video"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
         </div>
         <div>
           <p className="eyebrow">About SeeYes</p>
