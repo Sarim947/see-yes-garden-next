@@ -2,6 +2,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import EntryDoorDetailPage from "@/components/entry-door-detail";
 import { ReadyProjectCta, SiteFooter } from "@/components/FooterSections";
+import ProductGalleryCarousel from "@/components/ProductGalleryCarousel";
 import SiteHeader from "@/components/SiteHeader";
 import { getDoorProductBySlug } from "@/data/productLines";
 import { getProductBySlug, inquiryText, productsCatalog } from "@/data/productsCatalog";
@@ -57,18 +58,7 @@ export default async function ProductDetailPage({ params }: ProductDetailProps) 
       </section>
 
       <section className="product-detail-layout">
-        <div className="product-gallery">
-          <div className="product-main-image">
-            <Image src={product.image} alt={product.title} fill priority sizes="(max-width: 900px) 100vw, 48vw" />
-          </div>
-          <div className="product-thumbs">
-            {product.gallery.map((image) => (
-              <div key={image}>
-                <Image src={image} alt={product.title} fill sizes="140px" />
-              </div>
-            ))}
-          </div>
-        </div>
+        <ProductGalleryCarousel images={product.gallery.length ? product.gallery : [product.image]} title={product.title} />
 
         <div className="product-detail-copy">
           <p className="eyebrow">{product.category}</p>
