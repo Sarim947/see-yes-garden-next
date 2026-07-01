@@ -6,7 +6,7 @@ import {
   getCategoryCounts,
   getFilterCount,
   productFilterGroups,
-  productsCatalog,
+  publicProductsCatalog,
 } from "@/data/productsCatalog";
 
 type ProductsCatalogProps = {
@@ -20,7 +20,7 @@ export default function ProductsCatalog({ initialCategory }: ProductsCatalogProp
   const materialGroup = productFilterGroups.find((group) => group.title === "Material");
   const products = useMemo(
     () =>
-      productsCatalog.filter((item) => {
+      publicProductsCatalog.filter((item) => {
         const categoryMatch = selectedCategory ? item.category === selectedCategory : true;
         const materialMatch = selectedMaterial ? item.materials.includes(selectedMaterial) : true;
         return categoryMatch && materialMatch;
@@ -45,7 +45,7 @@ export default function ProductsCatalog({ initialCategory }: ProductsCatalogProp
               type="button"
               onClick={() => setSelectedCategory(undefined)}
             >
-              <span /> All Products ({productsCatalog.length})
+              <span /> All Products ({publicProductsCatalog.length})
             </button>
             {counts.map((item) => (
               <button

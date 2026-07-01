@@ -12,6 +12,14 @@ export type ProductItem = {
   customization: string[];
   oemSupport: string[];
   template?: "standard" | "door";
+  cardModel?: string;
+  cardSize?: string;
+  cardCbm?: string;
+  moq?: string;
+  grossWeight?: string;
+  netWeight?: string;
+  packing?: string;
+  status?: "published" | "deleted";
   productDescription?: string[][];
   faqs?: string[][];
   relatedProducts?: Array<{

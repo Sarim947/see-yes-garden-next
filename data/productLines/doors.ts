@@ -278,5 +278,5 @@ export const doorProducts: DoorProduct[] = [
 ];
 
 export function getDoorProductBySlug(slug: string) {
-  return doorProducts.find((product) => product.slug === slug);
+  return doorProducts.find((product) => product.slug === slug && product.status !== "deleted");
 }

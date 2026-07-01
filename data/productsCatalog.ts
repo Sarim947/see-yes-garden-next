@@ -4,6 +4,8 @@ import type { ProductItem } from "@/data/productLines";
 export type { ProductItem };
 export { productsCatalog };
 
+export const publicProductsCatalog = productsCatalog.filter((item) => item.status !== "deleted");
+
 export const categoryLabels = [
   "Aluminum Pergola",
   "Metal Shed",
@@ -43,7 +45,7 @@ export const productFilterGroups = [
   },
 ] as const;
 
-export function getCategoryCounts(items = productsCatalog) {
+export function getCategoryCounts(items = publicProductsCatalog) {
   return categoryLabels
     .map((category) => ({
       category,
@@ -61,11 +63,11 @@ export function categoryFromSlug(slug?: string) {
 }
 
 export function getFilterCount(key: (typeof productFilterGroups)[number]["key"], value: string) {
-  return productsCatalog.filter((item) => item[key].includes(value)).length;
+  return publicProductsCatalog.filter((item) => item[key].includes(value)).length;
 }
 
 export function getProductBySlug(slug: string) {
-  return productsCatalog.find((item) => item.slug === slug);
+  return publicProductsCatalog.find((item) => item.slug === slug);
 }
 
 export function inquiryText(product: ProductItem) {

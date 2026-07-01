@@ -5,14 +5,14 @@ import { ReadyProjectCta, SiteFooter } from "@/components/FooterSections";
 import ProductGalleryCarousel from "@/components/ProductGalleryCarousel";
 import SiteHeader from "@/components/SiteHeader";
 import { getDoorProductBySlug } from "@/data/productLines";
-import { getProductBySlug, inquiryText, productsCatalog } from "@/data/productsCatalog";
+import { getProductBySlug, inquiryText, publicProductsCatalog } from "@/data/productsCatalog";
 
 type ProductDetailProps = {
   params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
-  return productsCatalog.map((product) => ({ slug: product.slug }));
+  return publicProductsCatalog.map((product) => ({ slug: product.slug }));
 }
 
 function inquiryHref(product: NonNullable<ReturnType<typeof getProductBySlug>>, target: "contact" | "quote") {
