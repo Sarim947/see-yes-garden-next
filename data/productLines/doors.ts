@@ -576,6 +576,229 @@ export const doorProducts: DoorProduct[] = [
       },
     ],
   },
+{
+    slug: "eeds-465",
+    title: "EDS-465",
+    category: "Entry Door",
+    template: "door",
+    subtitle: "333333 for outdoor projects and wholesale supply.",
+    description: "塞饭",
+    image: "/images/products/entry-door/eeds-465/product-card/card.webp",
+    gallery: [
+      "/images/products/entry-door/eeds-465/detail-carousel/01-1691q9-12q00.webp",
+      "/images/products/entry-door/eeds-465/detail-carousel/02-1691q9-12qw00.webp",
+      "/images/products/entry-door/eeds-465/detail-carousel/03-1691q9-12qw00w.webp",
+      "/images/products/entry-door/eeds-465/detail-carousel/04-1691q9-1200.webp",
+      "/images/products/entry-door/eeds-465/detail-carousel/05-1699-1200.webp",
+    ],
+    highlights: [
+      "Galvanized Steel",
+      "33 x 333 x 33 cm",
+      "3",
+      "OEM & ODM support",
+    ],
+    applications: [
+      "Residential",
+      "Commercial & Hospitality",
+    ],
+    materials: [
+      "Galvanized Steel",
+      "Aluminum",
+    ],
+    customization: [
+      "Custom Size",
+      "Custom Color",
+      "Packaging",
+    ],
+    oemSupport: [
+      "Private Label",
+      "Packaging",
+      "Project Supply",
+    ],
+    cardModel: "333333",
+    cardSize: "33 x 333 x 33 cm",
+    cardCbm: "0.3000 m³",
+    moq: "3",
+    grossWeight: "33",
+    netWeight: "33",
+    packing: "3",
+    status: "published",
+    productDescription: [
+      [
+        "Item Number",
+        "To be confirmed",
+      ],
+      [
+        "Product Name",
+        "EDS-465",
+      ],
+      [
+        "Material",
+        "Galvanized Steel / Aluminum",
+      ],
+      [
+        "Overall Size",
+        "Customized",
+      ],
+      [
+        "Color",
+        "Customized",
+      ],
+      [
+        "Packing",
+        "Carton",
+      ],
+      [
+        "MOQ",
+        "To be confirmed",
+      ],
+      [
+        "Gross Weight",
+        "To be confirmed",
+      ],
+      [
+        "Net Weight",
+        "To be confirmed",
+      ],
+      [
+        "CBM",
+        "To be confirmed",
+      ],
+    ],
+    faqs: [
+      [
+        "Can I customize the size?",
+        "Yes. Send us your required length, width, height or technical drawing, and we can prepare a custom entry door plan.",
+      ],
+      [
+        "Can I choose the color and finish?",
+        "Yes. Color, surface finish and product details can be selected according to your market needs.",
+      ],
+      [
+        "Do you support OEM packaging?",
+        "Yes. We can support neutral packing, branded labels, instruction sheets, cartons and retail packaging for bulk orders.",
+      ],
+      [
+        "What information is needed for quotation?",
+        "Please provide size, quantity, destination country, material preference, finish color and any reference image or drawing.",
+      ],
+      [
+        "Can you supply for project orders?",
+        "Yes. We support retail, residential and project supply with production coordination, packing and export delivery.",
+      ],
+    ],
+    relatedProducts: [
+      {
+        title: "Aluminum Glass Door SED-3808",
+        image: "/images/products/entry-door/aluminum-glass-door-SED-3808/product-card/01-scene-main.webp",
+        slug: "aluminum-glass-door-SED-3808",
+      },
+      {
+        title: "Aluminum Glass Door SED-3808",
+        image: "/images/products/entry-door/aluminum-glass-door-SED-3808/product-card/01-scene-main.webp",
+        slug: "aluminum-glass-door-SED-3808",
+      },
+      {
+        title: "Pivot Door SED-01",
+        image: "/images/products/entry-door/pivot-door-SED-01/product-card/pivot-door-card-desktop.jpg",
+        slug: "pivot-door-sed-01",
+      },
+    ],
+    cardImage: "/images/products/entry-door/eeds-465/product-card/card.webp",
+    quickSpecs: [
+      [
+        "Model",
+        "333333",
+      ],
+      [
+        "Size",
+        "33 x 333 x 33 cm",
+      ],
+      [
+        "Material",
+        "Galvanized Steel / Aluminum",
+      ],
+      [
+        "Surface Finish",
+        "Powder coating, wood grain or custom color",
+      ],
+      [
+        "Packing",
+        "3",
+      ],
+      [
+        "Project Supply",
+        "OEM packaging and bulk order support",
+      ],
+    ],
+    overview: "塞饭",
+    parameters: [
+      [
+        "Item Number",
+        "To be confirmed",
+      ],
+      [
+        "Product Name",
+        "EDS-465",
+      ],
+      [
+        "Material",
+        "Galvanized Steel / Aluminum",
+      ],
+      [
+        "Overall Size",
+        "Customized",
+      ],
+      [
+        "Color",
+        "Customized",
+      ],
+      [
+        "Packing",
+        "Carton",
+      ],
+      [
+        "MOQ",
+        "To be confirmed",
+      ],
+      [
+        "Gross Weight",
+        "To be confirmed",
+      ],
+      [
+        "Net Weight",
+        "To be confirmed",
+      ],
+      [
+        "CBM",
+        "To be confirmed",
+      ],
+    ],
+    applicationScenes: [
+      {
+        title: "Residential Entrance",
+        image: "/images/products/entry-door/eeds-465/product-card/card.webp",
+      },
+    ],
+    factorySteps: [
+      {
+        title: "Workshop",
+        image: "/images/production-workshop.webp",
+      },
+      {
+        title: "Surface Treatment",
+        image: "/images/powder-coating.webp",
+      },
+      {
+        title: "Inspection",
+        image: "/images/quality-inspection.webp",
+      },
+      {
+        title: "Export Packing",
+        image: "/images/packing.webp",
+      },
+    ],
+  },
 ];
 
 export function getDoorProductBySlug(slug: string) {
