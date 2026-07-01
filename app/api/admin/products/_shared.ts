@@ -476,14 +476,19 @@ function renderValue(value: unknown, indent = 0): string {
 async function writeChanges(changes: FileChange[], message: string) {
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
     await commitToGithub(changes, message);
+    return;
   }
 
-  if (!process.env.VERCEL) {
-    for (const change of changes) {
-      const absolutePath = path.join(projectRoot, change.repoPath);
-      await mkdir(path.dirname(absolutePath), { recursive: true });
-      await writeFile(absolutePath, change.content);
-    }
+  if (process.env.VERCEL) {
+    throw new Error(
+      "GitHub environment variables are missing. Set GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO and GITHUB_BRANCH in Vercel.",
+    );
+  }
+
+  for (const change of changes) {
+    const absolutePath = path.join(projectRoot, change.repoPath);
+    await mkdir(path.dirname(absolutePath), { recursive: true });
+    await writeFile(absolutePath, change.content);
   }
 }
 

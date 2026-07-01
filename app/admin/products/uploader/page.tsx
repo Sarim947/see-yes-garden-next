@@ -181,14 +181,16 @@ export default function ProductUploaderPage() {
     }));
   }
 
-  function resetForm() {
+  function resetForm(options?: { keepMessage?: boolean }) {
     setForm(emptyForm);
     setMode("add");
     setMainImage(null);
     setGallery([]);
     setSpecImage(null);
     setRelatedImages([null, null, null]);
-    setMessage("");
+    if (!options?.keepMessage) {
+      setMessage("");
+    }
   }
 
   function editProduct(product: AdminProduct) {
@@ -251,9 +253,22 @@ export default function ProductUploaderPage() {
         throw new Error(data.message || "Save failed.");
       }
 
-      setMessage(action === "draft" ? "Draft saved." : "Product saved. Frontend files have been updated.");
-      await loadProducts();
-      if (action !== "draft") resetForm();
+      const savedProduct = data.product ? toAdminProduct(data.product, form.categoryLabel) : undefined;
+      if (savedProduct) {
+        setProducts((current) => {
+          const withoutOld = current.filter((item) => item.slug !== savedProduct.slug && item.slug !== form.originalSlug);
+          return [savedProduct, ...withoutOld];
+        });
+      }
+
+      if (action !== "draft") {
+        resetForm({ keepMessage: true });
+      }
+      setMessage(
+        action === "draft"
+          ? "Draft saved. 草稿已保存。"
+          : "Product submitted. 产品已提交；线上会触发 GitHub commit 和 Vercel redeploy，部署完成后前台显示。",
+      );
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "Save failed.");
     } finally {
@@ -275,8 +290,8 @@ export default function ProductUploaderPage() {
       return;
     }
 
-    setMessage("Product deleted from frontend. Data is kept as deleted.");
-    await loadProducts();
+    setProducts((current) => current.map((item) => (item.slug === product.slug ? { ...item, status: "deleted" } : item)));
+    setMessage("Product deleted. 已从后台列表隐藏；线上会触发 GitHub commit 和 Vercel redeploy。");
   }
 
   function login(event: FormEvent<HTMLFormElement>) {
@@ -318,7 +333,7 @@ export default function ProductUploaderPage() {
               <p>{mode === "edit" ? "Update the details below and save" : "Fill in the required fields and any optional details"}</p>
             </div>
             {mode === "edit" ? (
-              <button className="admin-cancel" type="button" onClick={resetForm} aria-label="Cancel edit">
+              <button className="admin-cancel" type="button" onClick={() => resetForm()} aria-label="Cancel edit">
                 x
               </button>
             ) : null}
@@ -529,7 +544,7 @@ export default function ProductUploaderPage() {
             </details>
 
             <div className="admin-actions">
-              <button type="button" className="ghost-btn" onClick={resetForm}>
+              <button type="button" className="ghost-btn" onClick={() => resetForm()}>
                 Clear
               </button>
               <button type="button" className="secondary-admin-btn" disabled={saving} onClick={() => submitProduct("draft")}>
@@ -673,6 +688,13 @@ function fillRelatedRows(items?: ProductItem["relatedProducts"]) {
   }));
   while (rows.length < 3) rows.push({ title: "", image: "", slug: "" });
   return rows.slice(0, 3);
+}
+
+function toAdminProduct(product: ProductItem, categoryLabel: string): AdminProduct {
+  return {
+    ...product,
+    adminCategoryLabel: categoryLabel || product.category,
+  };
 }
 
 function updateRelated(
