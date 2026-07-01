@@ -474,8 +474,10 @@ function renderValue(value: unknown, indent = 0): string {
 }
 
 async function writeChanges(changes: FileChange[], message: string) {
+  const uniqueChanges = Array.from(new Map(changes.map((change) => [change.repoPath, change])).values());
+
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
-    await commitToGithub(changes, message);
+    await commitToGithub(uniqueChanges, message);
     return;
   }
 
@@ -485,7 +487,7 @@ async function writeChanges(changes: FileChange[], message: string) {
     );
   }
 
-  for (const change of changes) {
+  for (const change of uniqueChanges) {
     const absolutePath = path.join(projectRoot, change.repoPath);
     await mkdir(path.dirname(absolutePath), { recursive: true });
     await writeFile(absolutePath, change.content);
@@ -497,34 +499,98 @@ async function commitToGithub(changes: FileChange[], message: string) {
   const repo = process.env.GITHUB_REPO;
   const branch = process.env.GITHUB_BRANCH || "main";
   const token = process.env.GITHUB_TOKEN;
+  const apiBase = `https://api.github.com/repos/${owner}/${repo}`;
 
-  for (const change of changes) {
-    const url = `https://api.github.com/repos/${owner}/${repo}/contents/${change.repoPath}`;
-    const current = await fetch(`${url}?ref=${branch}`, {
+  const ref = await githubJson<{ object: { sha: string } }>(
+    `${apiBase}/git/ref/heads/${branch}`,
+    { headers: githubHeaders(token) },
+    "GitHub branch lookup failed",
+  );
+
+  const baseCommit = await githubJson<{ tree: { sha: string } }>(
+    `${apiBase}/git/commits/${ref.object.sha}`,
+    { headers: githubHeaders(token) },
+    "GitHub base commit lookup failed",
+  );
+
+  const tree = await Promise.all(
+    changes.map(async (change) => {
+      const content =
+        typeof change.content === "string"
+          ? Buffer.from(change.content).toString("base64")
+          : change.content.toString("base64");
+
+      const blob = await githubJson<{ sha: string }>(
+        `${apiBase}/git/blobs`,
+        {
+          method: "POST",
+          headers: githubHeaders(token),
+          body: JSON.stringify({
+            content,
+            encoding: "base64",
+          }),
+        },
+        `GitHub blob creation failed for ${change.repoPath}`,
+      );
+
+      return {
+        path: change.repoPath,
+        mode: "100644",
+        type: "blob",
+        sha: blob.sha,
+      };
+    }),
+  );
+
+  const nextTree = await githubJson<{ sha: string }>(
+    `${apiBase}/git/trees`,
+    {
+      method: "POST",
       headers: githubHeaders(token),
-    });
-    const currentJson = current.ok ? ((await current.json()) as { sha?: string }) : {};
-    const content =
-      typeof change.content === "string"
-        ? Buffer.from(change.content).toString("base64")
-        : change.content.toString("base64");
+      body: JSON.stringify({
+        base_tree: baseCommit.tree.sha,
+        tree,
+      }),
+    },
+    "GitHub tree creation failed",
+  );
 
-    const response = await fetch(url, {
-      method: "PUT",
+  const nextCommit = await githubJson<{ sha: string }>(
+    `${apiBase}/git/commits`,
+    {
+      method: "POST",
       headers: githubHeaders(token),
       body: JSON.stringify({
         message,
-        content,
-        branch,
-        sha: currentJson.sha,
+        tree: nextTree.sha,
+        parents: [ref.object.sha],
       }),
-    });
+    },
+    "GitHub commit creation failed",
+  );
 
-    if (!response.ok) {
-      const text = await response.text();
-      throw new Error(`GitHub commit failed for ${change.repoPath}: ${text}`);
-    }
+  await githubJson(
+    `${apiBase}/git/refs/heads/${branch}`,
+    {
+      method: "PATCH",
+      headers: githubHeaders(token),
+      body: JSON.stringify({
+        sha: nextCommit.sha,
+        force: false,
+      }),
+    },
+    "GitHub branch update failed",
+  );
+}
+
+async function githubJson<T = unknown>(url: string, init: RequestInit, label: string) {
+  const response = await fetch(url, init);
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(`${label}: ${text}`);
   }
+
+  return (await response.json()) as T;
 }
 
 function githubHeaders(token?: string) {
