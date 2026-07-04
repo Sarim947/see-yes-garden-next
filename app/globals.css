@@ -784,6 +784,74 @@ p {
   justify-content: center;
 }
 
+.sales-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.sales-contact-card {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 22px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.sales-avatar {
+  position: relative;
+  display: grid;
+  width: 82px;
+  height: 82px;
+  margin-bottom: 6px;
+  place-items: center;
+  border: 3px solid rgba(255, 255, 255, 0.78);
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f6f8f1, #c9d9ce);
+  color: var(--green);
+  font-size: 22px;
+  font-weight: 900;
+  overflow: hidden;
+}
+
+.sales-avatar img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sales-avatar span {
+  position: relative;
+  z-index: 0;
+}
+
+.sales-contact-card h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 17px;
+}
+
+.sales-contact-card p {
+  margin: 0 0 4px;
+  font-size: 13px;
+}
+
+.sales-contact-card a {
+  max-width: 100%;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
 .site-footer {
   display: grid;
   grid-template-columns: 1.1fr 1.2fr 1.2fr 0.9fr;
@@ -3279,6 +3347,10 @@ p {
 }
 
 @media (max-width: 1180px) {
+  .sales-contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .admin-layout,
   .admin-products-head {
     grid-template-columns: 1fr;
@@ -3291,6 +3363,10 @@ p {
 }
 
 @media (max-width: 620px) {
+  .sales-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
   .admin-two,
   .admin-three,
   .admin-actions,

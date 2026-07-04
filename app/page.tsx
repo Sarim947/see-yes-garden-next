@@ -25,14 +25,44 @@ const homeCategoryMap: Record<string, string> = {
   "Entry Doors": "Entry Door",
 };
 
+const salesContacts = [
+  {
+    name: "Leah",
+    role: "Sales Consultant",
+    phone: "+86 15325897927",
+    email: "Leah@seeyesgarden.com",
+    photo: "/images/team/sales-01.png",
+    initials: "S1",
+  },
+  {
+    name: "Lisa",
+    role: "Sales Consultant",
+    phone: "+86 15325897927",
+    email: "Lisani@seeyesgarden.com",
+    photo: "/images/team/sales-02.png",
+    initials: "S2",
+  },
+  {
+    name: "Huan",
+    role: "Sales Consultant",
+    phone: "+86 18767505685",
+    email: "Huan@seeyesgarden.com",
+    photo: "/images/team/sales-03.jpg",
+    initials: "S3",
+  },
+  {
+    name: "Edison",
+    role: "Sales Consultant",
+    phone: "+86 15325897927",
+    email: "Edison@seeyesgarden.com",
+    photo: "/images/team/sales-04.svg",
+    initials: "S4",
+  },
+];
+
 export default function Home() {
   return (
     <main>
-      <div className="topbar">
-        <span>Email: edison@seeyesgarden.com</span>
-        <span>WhatsApp: +86 15325897927</span>
-      </div>
-
       <SiteHeader />
 
       <HeroCarousel slides={heroSlides} />
@@ -192,13 +222,19 @@ export default function Home() {
             Add: NO. 3988, BINHONG WEST ROAD, WUCHENG DISTRICT, JINHUA,
             ZHEJIANG 321000, CHINA
           </p>
-          <div className="contact-actions">
-            <a className="primary-btn" href="/contact#inquiry">
-              edison@seeyesgarden.com
-            </a>
-            <a className="secondary-green" href="https://wa.me/8615325897927">
-              WhatsApp: +86 15325897927
-            </a>
+          <div className="sales-contact-grid" aria-label="Sales contacts">
+            {salesContacts.map((contact) => (
+              <article className="sales-contact-card" key={contact.email}>
+                <div className="sales-avatar" aria-hidden="true">
+                  <img src={contact.photo} alt="" />
+                  <span>{contact.initials}</span>
+                </div>
+                <h3>{contact.name}</h3>
+                <p>{contact.role}</p>
+                <a href={`tel:${contact.phone.replace(/\s/g, "")}`}>{contact.phone}</a>
+                <a href={`mailto:${contact.email}`}>{contact.email}</a>
+              </article>
+            ))}
           </div>
         </div>
       </section>

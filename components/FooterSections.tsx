@@ -70,8 +70,6 @@ export function SiteFooter() {
       <div>
         <h3>Contact Us</h3>
         <p>Add: NO. 3988, BINHONG WEST ROAD, WUCHENG DISTRICT, JINHUA, ZHEJIANG 321000, CHINA</p>
-        <p>+86 15325897927</p>
-        <p>edison@seeyesgarden.com</p>
       </div>
     </footer>
   );
