@@ -55,7 +55,7 @@ const salesContacts = [
     role: "Sales Consultant",
     phone: "+86 15325897927",
     email: "Edison@seeyesgarden.com",
-    photo: "/images/team/sales-04.svg",
+    photo: "/images/team/sales-04.pic.jpg",
     initials: "S4",
   },
 ];
