@@ -29,7 +29,7 @@ const salesContacts = [
   {
     name: "Leah",
     role: "Sales Consultant",
-    phone: "+86 15325897927",
+    phone: "+86 15527186109",
     email: "Leah@seeyesgarden.com",
     photo: "/images/team/sales-01.png",
     initials: "S1",
@@ -37,8 +37,8 @@ const salesContacts = [
   {
     name: "Lisa",
     role: "Sales Consultant",
-    phone: "+86 15325897927",
-    email: "Lisani@seeyesgarden.com",
+    phone: "+86 13615896696",
+    email: "Lisa@seeyesgarden.com",
     photo: "/images/team/sales-02.png",
     initials: "S2",
   },
