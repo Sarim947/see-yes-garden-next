@@ -799,6 +799,228 @@ export const doorProducts: DoorProduct[] = [
       },
     ],
   },
+{
+    slug: "aluminum-door-sed-a-3598",
+    title: "Aluminum door SED-A-3598",
+    category: "Entry Door",
+    template: "door",
+    subtitle: "SED-A-3598 for outdoor projects and wholesale supply.",
+    description: "6mm Aluminum CNC door， with sliding handle equipped with smart lock.",
+    image: "/images/products/entry-door/aluminum-door-sed-a-3598/product-card/card.webp",
+    gallery: [
+      "/images/products/entry-door/aluminum-door-sed-a-3598/detail-carousel/01-detail-final.webp",
+      "/images/products/entry-door/aluminum-door-sed-a-3598/detail-carousel/02-hero-catalog-final.webp",
+      "/images/products/entry-door/aluminum-door-sed-a-3598/detail-carousel/03-hero-scene-final.webp",
+      "/images/products/entry-door/aluminum-door-sed-a-3598/detail-carousel/04-open-view-final.webp",
+    ],
+    highlights: [
+      "Galvanized Steel",
+      "228 x 118 x 12 cm",
+      "Plywood Case",
+      "OEM & ODM support",
+    ],
+    applications: [
+      "Residential",
+      "Commercial",
+    ],
+    materials: [
+      "Galvanized Steel",
+      "Aluminum",
+    ],
+    customization: [
+      "Custom Size",
+      "Custom Color",
+      "Packaging",
+    ],
+    oemSupport: [
+      "Private Label",
+      "Packaging",
+      "Project Supply",
+    ],
+    cardModel: "SED-A-3598",
+    cardSize: "228 x 118 x 12 cm",
+    cardCbm: "1.2250 m³",
+    moq: "4 pc",
+    grossWeight: "220",
+    netWeight: "150",
+    packing: "Plywood Case",
+    status: "published",
+    productDescription: [
+      [
+        "Item Number",
+        "SED-A-3598",
+      ],
+      [
+        "Product Name",
+        "Aluminum door",
+      ],
+      [
+        "Material",
+        "Galvanized Steel +Aluminum",
+      ],
+      [
+        "Overall Size",
+        "Customized",
+      ],
+      [
+        "Color",
+        "Customized",
+      ],
+      [
+        "Packing",
+        "Plywood case",
+      ],
+      [
+        "MOQ",
+        "1pc",
+      ],
+      [
+        "Gross Weight",
+        "To be confirmed",
+      ],
+      [
+        "Net Weight",
+        "To be confirmed",
+      ],
+      [
+        "CBM",
+        "1.2",
+      ],
+    ],
+    faqs: [
+      [
+        "Can I customize the size?",
+        "Yes. Send us your required length, width, height or technical drawing, and we can prepare a custom entry door plan.",
+      ],
+      [
+        "Can I choose the color and finish?",
+        "Yes. Color, surface finish and product details can be selected according to your market needs.",
+      ],
+      [
+        "Do you support OEM packaging?",
+        "Yes. We can support neutral packing, branded labels, instruction sheets, cartons and retail packaging for bulk orders.",
+      ],
+      [
+        "What information is needed for quotation?",
+        "Please provide size, quantity, destination country, material preference, finish color and any reference image or drawing.",
+      ],
+      [
+        "Can you supply for project orders?",
+        "Yes. We support retail, residential and project supply with production coordination, packing and export delivery.",
+      ],
+    ],
+    relatedProducts: [
+      {
+        title: "Pivot Door SED-01",
+        image: "/images/products/entry-door/pivot-door-SED-01/product-card/pivot-door-card-desktop.jpg",
+        slug: "pivot-door-sed-01",
+      },
+      {
+        title: "Aluminum Glass Door SED-3808",
+        image: "/images/products/entry-door/aluminum-glass-door-SED-3808/product-card/01-scene-main.webp",
+        slug: "aluminum-glass-door-SED-3808",
+      },
+      {
+        title: "Raised Garden Bed FC-C4C",
+        image: "/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/product-card/card.webp",
+        slug: "raised-garden-bed-fc-c4c",
+      },
+    ],
+    cardImage: "/images/products/entry-door/aluminum-door-sed-a-3598/product-card/card.webp",
+    quickSpecs: [
+      [
+        "Model",
+        "SED-A-3598",
+      ],
+      [
+        "Size",
+        "228 x 118 x 12 cm",
+      ],
+      [
+        "Material",
+        "Galvanized Steel / Aluminum",
+      ],
+      [
+        "Surface Finish",
+        "Powder coating, wood grain or custom color",
+      ],
+      [
+        "Packing",
+        "Plywood Case",
+      ],
+      [
+        "Project Supply",
+        "OEM packaging and bulk order support",
+      ],
+    ],
+    overview: "6mm Aluminum CNC door， with sliding handle equipped with smart lock.",
+    parameters: [
+      [
+        "Item Number",
+        "SED-A-3598",
+      ],
+      [
+        "Product Name",
+        "Aluminum door",
+      ],
+      [
+        "Material",
+        "Galvanized Steel +Aluminum",
+      ],
+      [
+        "Overall Size",
+        "Customized",
+      ],
+      [
+        "Color",
+        "Customized",
+      ],
+      [
+        "Packing",
+        "Plywood case",
+      ],
+      [
+        "MOQ",
+        "1pc",
+      ],
+      [
+        "Gross Weight",
+        "To be confirmed",
+      ],
+      [
+        "Net Weight",
+        "To be confirmed",
+      ],
+      [
+        "CBM",
+        "1.2",
+      ],
+    ],
+    applicationScenes: [
+      {
+        title: "Residential Entrance",
+        image: "/images/products/entry-door/aluminum-door-sed-a-3598/product-card/card.webp",
+      },
+    ],
+    factorySteps: [
+      {
+        title: "Workshop",
+        image: "/images/production-workshop.webp",
+      },
+      {
+        title: "Surface Treatment",
+        image: "/images/powder-coating.webp",
+      },
+      {
+        title: "Inspection",
+        image: "/images/quality-inspection.webp",
+      },
+      {
+        title: "Export Packing",
+        image: "/images/packing.webp",
+      },
+    ],
+  },
 ];
 
 export function getDoorProductBySlug(slug: string) {
