@@ -622,7 +622,7 @@ export const doorProducts: DoorProduct[] = [
     grossWeight: "33",
     netWeight: "33",
     packing: "3",
-    status: "published",
+    status: "deleted",
     productDescription: [
       [
         "Item Number",
