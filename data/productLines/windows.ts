@@ -83,7 +83,7 @@ export const windowProducts: ProductItem[] = [
     grossWeight: "11",
     netWeight: "11",
     packing: "Carton",
-    status: "published",
+    status: "deleted",
     productDescription: [
       [
         "Item Number",
