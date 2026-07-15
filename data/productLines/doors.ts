@@ -808,9 +808,9 @@ export const doorProducts: DoorProduct[] = [
     description: "6mm Aluminum CNC door， with sliding handle equipped with smart lock.",
     image: "/images/products/entry-door/aluminum-door-sed-a-3598/product-card/card.webp",
     gallery: [
+      "/images/products/entry-door/aluminum-door-sed-a-3598/detail-carousel/03-hero-scene-final.webp",
       "/images/products/entry-door/aluminum-door-sed-a-3598/detail-carousel/01-detail-final.webp",
       "/images/products/entry-door/aluminum-door-sed-a-3598/detail-carousel/02-hero-catalog-final.webp",
-      "/images/products/entry-door/aluminum-door-sed-a-3598/detail-carousel/03-hero-scene-final.webp",
       "/images/products/entry-door/aluminum-door-sed-a-3598/detail-carousel/04-open-view-final.webp",
     ],
     highlights: [
