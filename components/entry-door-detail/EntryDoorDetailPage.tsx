@@ -17,6 +17,21 @@ function entryDoorInquiryHref(product: DoorProduct, label: string, target: "cont
   return `/${target}?${params.toString()}${target === "contact" ? "#inquiry" : ""}`;
 }
 
+const entryDoorApplicationScenes = [
+  {
+    title: "Office Workplace",
+    image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/01-office-workplace-scene.jpg",
+  },
+  {
+    title: "Luxury Villa",
+    image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/02-luxury-villa-scene.jpg",
+  },
+  {
+    title: "Luxury Apartment",
+    image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/03-luxury-apartment-scene.jpg",
+  },
+];
+
 export default function EntryDoorDetailPage({ product }: { product: DoorProduct }) {
   return (
     <main>
@@ -82,7 +97,7 @@ export default function EntryDoorDetailPage({ product }: { product: DoorProduct 
         <article className="entry-door-panel entry-door-media-panel">
           <h2>Application Scenes</h2>
           <div className="entry-door-image-grid three application-scenes">
-            {product.applicationScenes.map((item) => (
+            {entryDoorApplicationScenes.map((item) => (
               <article key={item.title}>
                 <div>
                   <Image src={item.image} alt={item.title} fill sizes="(max-width: 900px) 100vw, 360px" />
@@ -141,7 +156,7 @@ export default function EntryDoorDetailPage({ product }: { product: DoorProduct 
           <h2>Related Products</h2>
           <div className="entry-door-related">
             {product.relatedProducts.map((item) => (
-              <a key={item.title} href={entryDoorInquiryHref(product, item.title, "quote")}>
+              <a key={item.title} href={`/products/${item.slug ?? product.slug}`}>
                 <div>
                   <Image src={item.image} alt={item.title} fill sizes="(max-width: 900px) 100vw, 320px" />
                 </div>

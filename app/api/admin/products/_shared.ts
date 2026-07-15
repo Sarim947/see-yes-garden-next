@@ -430,8 +430,16 @@ function buildDoorFields(product: ProductItem, mainImage: string) {
     parameters: product.productDescription ?? [],
     applicationScenes: [
       {
-        title: "Residential Entrance",
-        image: mainImage,
+        title: "Office Workplace",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/01-office-workplace-scene.jpg",
+      },
+      {
+        title: "Luxury Villa",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/02-luxury-villa-scene.jpg",
+      },
+      {
+        title: "Luxury Apartment",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/03-luxury-apartment-scene.jpg",
       },
     ],
     factorySteps: [
