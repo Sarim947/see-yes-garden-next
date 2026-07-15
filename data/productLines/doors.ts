@@ -1028,6 +1028,236 @@ export const doorProducts: DoorProduct[] = [
       },
     ],
   },
+{
+    slug: "pivot-door-p5890",
+    title: "Pivot-SED-P-5890",
+    category: "Entry Door",
+    template: "door",
+    subtitle: "Pivot-SED-P-5890 for outdoor projects and wholesale supply.",
+    description: "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
+    image: "/images/products/entry-door/pivot-door-p5890/product-card/card.webp",
+    gallery: [
+      "/images/products/entry-door/pivot-door-p5890/detail-carousel/01-1.webp",
+      "/images/products/entry-door/pivot-door-p5890/detail-carousel/02-2.webp",
+      "/images/products/entry-door/pivot-door-p5890/detail-carousel/03-1.webp",
+      "/images/products/entry-door/pivot-door-p5890/detail-carousel/04-sed-p-5890.webp",
+    ],
+    highlights: [
+      "Galvanized Steel",
+      "240 x 180 x 9 cm",
+      "Plywood Case",
+      "OEM & ODM support",
+    ],
+    applications: [
+      "Residential",
+      "Commercial",
+    ],
+    materials: [
+      "Galvanized Steel",
+      "Aluminum",
+    ],
+    customization: [
+      "Custom Size",
+      "Custom Color",
+      "Packaging",
+    ],
+    oemSupport: [
+      "Private Label",
+      "Packaging",
+      "Project Supply",
+    ],
+    cardModel: "Pivot-SED-P-5890",
+    cardSize: "240 x 180 x 9 cm",
+    cardCbm: "1.8200 m³",
+    moq: "1pc",
+    grossWeight: "270",
+    netWeight: "180",
+    packing: "Plywood Case",
+    status: "published",
+    productDescription: [
+      [
+        "Item Number",
+        "Pivot-SED-P-5890",
+      ],
+      [
+        "Product Name",
+        "Pivot-SED-P-5890",
+      ],
+      [
+        "Material",
+        "Aluminum",
+      ],
+      [
+        "Overall Size",
+        "Customized",
+      ],
+      [
+        "Color",
+        "Customized",
+      ],
+      [
+        "Packing",
+        "Carton",
+      ],
+      [
+        "MOQ",
+        "1pc",
+      ],
+      [
+        "Gross Weight",
+        "270",
+      ],
+      [
+        "Net Weight",
+        "180",
+      ],
+      [
+        "CBM",
+        "To be confirmed",
+      ],
+    ],
+    faqs: [
+      [
+        "Can I customize the size?",
+        "Yes. Send us your required length, width, height or technical drawing, and we can prepare a custom entry door plan.",
+      ],
+      [
+        "Can I choose the color and finish?",
+        "Yes. Color, surface finish and product details can be selected according to your market needs.",
+      ],
+      [
+        "Do you support OEM packaging?",
+        "Yes. We can support neutral packing, branded labels, instruction sheets, cartons and retail packaging for bulk orders.",
+      ],
+      [
+        "What information is needed for quotation?",
+        "Please provide size, quantity, destination country, material preference, finish color and any reference image or drawing.",
+      ],
+      [
+        "Can you supply for project orders?",
+        "Yes. We support retail, residential and project supply with production coordination, packing and export delivery.",
+      ],
+    ],
+    relatedProducts: [
+      {
+        title: "Aluminum door SED-A-3598",
+        image: "/images/products/entry-door/aluminum-door-sed-a-3598/product-card/card.webp",
+        slug: "aluminum-door-sed-a-3598",
+      },
+      {
+        title: "Pivot Door SED-01",
+        image: "/images/products/entry-door/pivot-door-SED-01/product-card/card2.webp",
+        slug: "pivot-door-sed-01",
+      },
+      {
+        title: "Aluminum Glass Door SED-3808",
+        image: "/images/products/entry-door/aluminum-glass-door-SED-3808/product-card/card3.webp",
+        slug: "aluminum-glass-door-SED-3808",
+      },
+    ],
+    cardImage: "/images/products/entry-door/pivot-door-p5890/product-card/card.webp",
+    quickSpecs: [
+      [
+        "Model",
+        "Pivot-SED-P-5890",
+      ],
+      [
+        "Size",
+        "240 x 180 x 9 cm",
+      ],
+      [
+        "Material",
+        "Galvanized Steel / Aluminum",
+      ],
+      [
+        "Surface Finish",
+        "Powder coating, wood grain or custom color",
+      ],
+      [
+        "Packing",
+        "Plywood Case",
+      ],
+      [
+        "Project Supply",
+        "OEM packaging and bulk order support",
+      ],
+    ],
+    overview: "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
+    parameters: [
+      [
+        "Item Number",
+        "Pivot-SED-P-5890",
+      ],
+      [
+        "Product Name",
+        "Pivot-SED-P-5890",
+      ],
+      [
+        "Material",
+        "Aluminum",
+      ],
+      [
+        "Overall Size",
+        "Customized",
+      ],
+      [
+        "Color",
+        "Customized",
+      ],
+      [
+        "Packing",
+        "Carton",
+      ],
+      [
+        "MOQ",
+        "1pc",
+      ],
+      [
+        "Gross Weight",
+        "270",
+      ],
+      [
+        "Net Weight",
+        "180",
+      ],
+      [
+        "CBM",
+        "To be confirmed",
+      ],
+    ],
+    applicationScenes: [
+      {
+        title: "Office Workplace",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/01-office-workplace-scene.jpg",
+      },
+      {
+        title: "Luxury Villa",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/02-luxury-villa-scene.jpg",
+      },
+      {
+        title: "Luxury Apartment",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/03-luxury-apartment-scene.jpg",
+      },
+    ],
+    factorySteps: [
+      {
+        title: "Workshop",
+        image: "/images/production-workshop.webp",
+      },
+      {
+        title: "Surface Treatment",
+        image: "/images/powder-coating.webp",
+      },
+      {
+        title: "Inspection",
+        image: "/images/quality-inspection.webp",
+      },
+      {
+        title: "Export Packing",
+        image: "/images/packing.webp",
+      },
+    ],
+  },
 ];
 
 export function getDoorProductBySlug(slug: string) {
