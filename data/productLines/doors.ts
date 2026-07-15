@@ -8,8 +8,8 @@ export const doorProducts: DoorProduct[] = [
     template: "door",
     subtitle: "Pivot doors for big open spaces demands.",
     description: "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
-    image: "/images/products/entry-door/pivot-door-SED-01/product-card/pivot-door-card-desktop.jpg",
-    cardImage: "/images/products/entry-door/pivot-door-SED-01/product-card/pivot-door-card-desktop.jpg",
+    image: "/images/products/entry-door/pivot-door-SED-01/product-card/card2.webp",
+    cardImage: "/images/products/entry-door/pivot-door-SED-01/product-card/card2.webp",
     gallery: [
       "/images/products/entry-door/pivot-door-SED-01/detail-carousel/desktop/01-scene-main.jpg",
       "/images/products/entry-door/pivot-door-SED-01/detail-carousel/desktop/02-white-main.jpg",
@@ -184,8 +184,8 @@ export const doorProducts: DoorProduct[] = [
     template: "door",
     subtitle: "Aluminum glass doors for lite demands.",
     description: "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
-    image: "/images/products/entry-door/aluminum-glass-door-SED-3808/product-card/01-scene-main.webp",
-    cardImage: "/images/products/entry-door/aluminum-glass-door-SED-3808/product-card/01-scene-main.webp",
+    image: "/images/products/entry-door/aluminum-glass-door-SED-3808/product-card/card3.webp",
+    cardImage: "/images/products/entry-door/aluminum-glass-door-SED-3808/product-card/card3.webp",
     gallery: [
       "/images/products/entry-door/aluminum-glass-door-SED-3808/detail-carousel/desktop/01-scene-main.webp",
       "/images/products/entry-door/aluminum-glass-door-SED-3808/detail-carousel/desktop/02-white-main.webp",
