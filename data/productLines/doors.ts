@@ -1068,7 +1068,6 @@ export const doorProducts: DoorProduct[] = [
     ],
     cardModel: "Pivot-SED-P-5890",
     cardSize: "240 x 180 x 9 cm",
-    cardCbm: "1.8200 m³",
     moq: "1pc",
     grossWeight: "270",
     netWeight: "180",
