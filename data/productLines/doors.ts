@@ -839,7 +839,6 @@ export const doorProducts: DoorProduct[] = [
     ],
     cardModel: "SED-A-3598",
     cardSize: "228 x 118 x 12 cm",
-    cardCbm: "1.2250 m³",
     moq: "4 pc",
     grossWeight: "220",
     netWeight: "150",
