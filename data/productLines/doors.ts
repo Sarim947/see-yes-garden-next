@@ -1037,10 +1037,10 @@ export const doorProducts: DoorProduct[] = [
     description: "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
     image: "/images/products/entry-door/pivot-door-p5890/product-card/card.webp",
     gallery: [
+      "/images/products/entry-door/pivot-door-p5890/detail-carousel/04-sed-p-5890.webp",
       "/images/products/entry-door/pivot-door-p5890/detail-carousel/01-1.webp",
       "/images/products/entry-door/pivot-door-p5890/detail-carousel/02-2.webp",
       "/images/products/entry-door/pivot-door-p5890/detail-carousel/03-1.webp",
-      "/images/products/entry-door/pivot-door-p5890/detail-carousel/04-sed-p-5890.webp",
     ],
     highlights: [
       "Galvanized Steel",
