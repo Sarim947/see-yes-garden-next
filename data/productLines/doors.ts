@@ -1266,16 +1266,16 @@ export const doorProducts: DoorProduct[] = [
     description: "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
     image: "/images/products/entry-door/sed-c1256w/product-card/card.webp",
     gallery: [
+      "/images/products/entry-door/sed-c1256w/detail-carousel/04-sed-c1256w-hero-1600x1200.webp",
       "/images/products/entry-door/sed-c1256w/detail-carousel/01-sed-c1256w-catalog-1600x1200.webp",
       "/images/products/entry-door/sed-c1256w/detail-carousel/02-sed-c1256w-detail-1600x1200.webp",
       "/images/products/entry-door/sed-c1256w/detail-carousel/03-sed-c1256w-frame-material-1600x1200.webp",
-      "/images/products/entry-door/sed-c1256w/detail-carousel/04-sed-c1256w-hero-1600x1200.webp",
       "/images/products/entry-door/sed-c1256w/detail-carousel/05-sed-c1256w-hinge-material-1600x1200.webp",
     ],
     highlights: [
       "Galvanized Steel",
       "205 x 96 x 12 cm",
-      "Export packing",
+      "Carton",
       "OEM & ODM support",
     ],
     applications: [
@@ -1298,11 +1298,10 @@ export const doorProducts: DoorProduct[] = [
     ],
     cardModel: "SED-C1256W",
     cardSize: "205 x 96 x 12 cm",
-    cardCbm: "0.3150 m³",
     moq: "20pcs",
     grossWeight: "80",
     netWeight: "65",
-    packing: "",
+    packing: "Carton",
     status: "published",
     productDescription: [
       [
@@ -1405,7 +1404,7 @@ export const doorProducts: DoorProduct[] = [
       ],
       [
         "Packing",
-        "Export packing",
+        "Carton",
       ],
       [
         "Project Supply",
