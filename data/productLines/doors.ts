@@ -1724,9 +1724,9 @@ export const doorProducts: DoorProduct[] = [
     description: "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
     image: "/images/products/entry-door/aluminum-door-sed-a-3633/product-card/card.webp",
     gallery: [
+      "/images/products/entry-door/aluminum-door-sed-a-3633/detail-carousel/03-hero-scene-final-2.webp",
       "/images/products/entry-door/aluminum-door-sed-a-3633/detail-carousel/01-catalog-final.webp",
       "/images/products/entry-door/aluminum-door-sed-a-3633/detail-carousel/02-detail-final.webp",
-      "/images/products/entry-door/aluminum-door-sed-a-3633/detail-carousel/03-hero-scene-final-2.webp",
       "/images/products/entry-door/aluminum-door-sed-a-3633/detail-carousel/04-hero-scene-final-3.webp",
     ],
     highlights: [
@@ -1755,7 +1755,6 @@ export const doorProducts: DoorProduct[] = [
     ],
     cardModel: "SED-A-3633",
     cardSize: "240 x 180 x 10 cm",
-    cardCbm: "1.8200 m³",
     moq: "1pc",
     grossWeight: "340",
     netWeight: "280",
