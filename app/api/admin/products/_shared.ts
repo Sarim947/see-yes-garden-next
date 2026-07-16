@@ -53,7 +53,7 @@ export function unauthorized() {
 }
 
 export function isAuthorized(request: Request, formData?: FormData) {
-  const configured = process.env.ADMIN_UPLOAD_PASSWORD;
+  const configured = envValue("ADMIN_UPLOAD_PASSWORD");
   const fallback = process.env.NODE_ENV === "development" ? "seeyes" : undefined;
   const expected = configured || fallback;
 
@@ -484,7 +484,7 @@ function renderValue(value: unknown, indent = 0): string {
 async function writeChanges(changes: FileChange[], message: string) {
   const uniqueChanges = Array.from(new Map(changes.map((change) => [change.repoPath, change])).values());
 
-  if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
+  if (envValue("GITHUB_TOKEN") && envValue("GITHUB_OWNER") && envValue("GITHUB_REPO")) {
     await commitToGithub(uniqueChanges, message);
     return;
   }
@@ -503,10 +503,10 @@ async function writeChanges(changes: FileChange[], message: string) {
 }
 
 async function commitToGithub(changes: FileChange[], message: string) {
-  const owner = process.env.GITHUB_OWNER;
-  const repo = process.env.GITHUB_REPO;
-  const branch = process.env.GITHUB_BRANCH || "main";
-  const token = process.env.GITHUB_TOKEN;
+  const owner = envValue("GITHUB_OWNER");
+  const repo = envValue("GITHUB_REPO");
+  const branch = envValue("GITHUB_BRANCH") || "main";
+  const token = envValue("GITHUB_TOKEN");
   const apiBase = `https://api.github.com/repos/${owner}/${repo}`;
 
   const ref = await githubJson<{ object: { sha: string } }>(
@@ -608,6 +608,10 @@ function githubHeaders(token?: string) {
     "Content-Type": "application/json",
     "X-GitHub-Api-Version": "2022-11-28",
   };
+}
+
+function envValue(name: string) {
+  return process.env[name]?.trim();
 }
 
 export async function getExistingDraft(slug: string) {

@@ -248,7 +248,7 @@ export default function ProductUploaderPage() {
         method: "POST",
         body: fd,
       });
-      const data = await response.json();
+      const data = await readApiJson(response);
       if (!response.ok) {
         throw new Error(data.message || "Save failed.");
       }
@@ -270,7 +270,7 @@ export default function ProductUploaderPage() {
           : "Product submitted. 产品已提交；线上会触发 GitHub commit 和 Vercel redeploy，部署完成后前台显示。",
       );
     } catch (error) {
-      setMessage(error instanceof Error ? error.message : "Save failed.");
+      setMessage(toUploadErrorMessage(error));
     } finally {
       setSaving(false);
     }
@@ -754,6 +754,30 @@ function splitList(value: string) {
     .split(",")
     .map((item) => item.trim())
     .filter(Boolean);
+}
+
+async function readApiJson(response: Response) {
+  const text = await response.text();
+  if (!text) {
+    return {};
+  }
+
+  try {
+    return JSON.parse(text) as { message?: string; product?: ProductItem };
+  } catch {
+    return {
+      message: `Upload API returned an unreadable response. Status: ${response.status}.`,
+    };
+  }
+}
+
+function toUploadErrorMessage(error: unknown) {
+  const message = error instanceof Error ? error.message : "Save failed.";
+  if (message.includes("The string did not match the expected pattern")) {
+    return "上传失败：系统检测到某个配置或路径格式不正确。请先检查 Vercel 里的 GITHUB_TOKEN / GITHUB_OWNER / GITHUB_REPO / GITHUB_BRANCH 是否多了空格、换行或引号。";
+  }
+
+  return message;
 }
 
 function defaultDescriptionRows() {
