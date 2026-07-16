@@ -1715,6 +1715,236 @@ export const doorProducts: DoorProduct[] = [
       },
     ],
   },
+{
+    slug: "aluminum-door-sed-a-3633",
+    title: "Aluminum Door SED-A-3633",
+    category: "Entry Door",
+    template: "door",
+    subtitle: "SED-A-3633 for outdoor projects and wholesale supply.",
+    description: "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
+    image: "/images/products/entry-door/aluminum-door-sed-a-3633/product-card/card.webp",
+    gallery: [
+      "/images/products/entry-door/aluminum-door-sed-a-3633/detail-carousel/01-catalog-final.webp",
+      "/images/products/entry-door/aluminum-door-sed-a-3633/detail-carousel/02-detail-final.webp",
+      "/images/products/entry-door/aluminum-door-sed-a-3633/detail-carousel/03-hero-scene-final-2.webp",
+      "/images/products/entry-door/aluminum-door-sed-a-3633/detail-carousel/04-hero-scene-final-3.webp",
+    ],
+    highlights: [
+      "Galvanized Steel",
+      "240 x 180 x 10 cm",
+      "Plywood Case",
+      "OEM & ODM support",
+    ],
+    applications: [
+      "Residential",
+      "Commercial & Hospitality",
+    ],
+    materials: [
+      "Galvanized Steel",
+      "Aluminum",
+    ],
+    customization: [
+      "Custom Size",
+      "Custom Color",
+      "Packaging",
+    ],
+    oemSupport: [
+      "Private Label",
+      "Packaging",
+      "Project Supply",
+    ],
+    cardModel: "SED-A-3633",
+    cardSize: "240 x 180 x 10 cm",
+    cardCbm: "1.8200 m³",
+    moq: "1pc",
+    grossWeight: "340",
+    netWeight: "280",
+    packing: "Plywood Case",
+    status: "published",
+    productDescription: [
+      [
+        "Item Number",
+        "SED-A-3633",
+      ],
+      [
+        "Product Name",
+        "Aluminum Door SED-A-3633",
+      ],
+      [
+        "Material",
+        "Galvanized Steel / Aluminum",
+      ],
+      [
+        "Overall Size",
+        "240 x 180 x 10 cm or Customized",
+      ],
+      [
+        "Color",
+        "Customized",
+      ],
+      [
+        "Packing",
+        "Plywood Case",
+      ],
+      [
+        "MOQ",
+        "1pc",
+      ],
+      [
+        "Gross Weight",
+        "340 kg",
+      ],
+      [
+        "Net Weight",
+        "280 kg",
+      ],
+      [
+        "CBM",
+        "1.8200 m³",
+      ],
+    ],
+    faqs: [
+      [
+        "Can I customize the size?",
+        "Yes. Send us your required length, width, height or technical drawing, and we can prepare a custom entry door plan.",
+      ],
+      [
+        "Can I choose the color and finish?",
+        "Yes. Color, surface finish and product details can be selected according to your market needs.",
+      ],
+      [
+        "Do you support OEM packaging?",
+        "Yes. We can support neutral packing, branded labels, instruction sheets, cartons and retail packaging for bulk orders.",
+      ],
+      [
+        "What information is needed for quotation?",
+        "Please provide size, quantity, destination country, material preference, finish color and any reference image or drawing.",
+      ],
+      [
+        "Can you supply for project orders?",
+        "Yes. We support retail, residential and project supply with production coordination, packing and export delivery.",
+      ],
+    ],
+    relatedProducts: [
+      {
+        title: "Aluminum Glass Door SED-3808",
+        image: "/images/products/entry-door/aluminum-glass-door-SED-3808/product-card/card3.webp",
+        slug: "aluminum-glass-door-SED-3808",
+      },
+      {
+        title: "Aluminum door SED-A-3598",
+        image: "/images/products/entry-door/aluminum-door-sed-a-3598/product-card/card.webp",
+        slug: "aluminum-door-sed-a-3598",
+      },
+      {
+        title: "Aluminum Door SED-A-5801",
+        image: "/images/products/entry-door/aluminum-door-sed-a-5801/product-card/card.webp",
+        slug: "aluminum-door-sed-a-5801",
+      },
+    ],
+    cardImage: "/images/products/entry-door/aluminum-door-sed-a-3633/product-card/card.webp",
+    quickSpecs: [
+      [
+        "Model",
+        "SED-A-3633",
+      ],
+      [
+        "Size",
+        "240 x 180 x 10 cm",
+      ],
+      [
+        "Material",
+        "Galvanized Steel / Aluminum",
+      ],
+      [
+        "Surface Finish",
+        "Powder coating, wood grain or custom color",
+      ],
+      [
+        "Packing",
+        "Plywood Case",
+      ],
+      [
+        "Project Supply",
+        "OEM packaging and bulk order support",
+      ],
+    ],
+    overview: "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
+    parameters: [
+      [
+        "Item Number",
+        "SED-A-3633",
+      ],
+      [
+        "Product Name",
+        "Aluminum Door SED-A-3633",
+      ],
+      [
+        "Material",
+        "Galvanized Steel / Aluminum",
+      ],
+      [
+        "Overall Size",
+        "240 x 180 x 10 cm or Customized",
+      ],
+      [
+        "Color",
+        "Customized",
+      ],
+      [
+        "Packing",
+        "Plywood Case",
+      ],
+      [
+        "MOQ",
+        "1pc",
+      ],
+      [
+        "Gross Weight",
+        "340 kg",
+      ],
+      [
+        "Net Weight",
+        "280 kg",
+      ],
+      [
+        "CBM",
+        "1.8200 m³",
+      ],
+    ],
+    applicationScenes: [
+      {
+        title: "Office Workplace",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/01-office-workplace-scene.jpg",
+      },
+      {
+        title: "Luxury Villa",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/02-luxury-villa-scene.jpg",
+      },
+      {
+        title: "Luxury Apartment",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/03-luxury-apartment-scene.jpg",
+      },
+    ],
+    factorySteps: [
+      {
+        title: "Workshop",
+        image: "/images/production-workshop.webp",
+      },
+      {
+        title: "Surface Treatment",
+        image: "/images/powder-coating.webp",
+      },
+      {
+        title: "Inspection",
+        image: "/images/quality-inspection.webp",
+      },
+      {
+        title: "Export Packing",
+        image: "/images/packing.webp",
+      },
+    ],
+  },
 ];
 
 export function getDoorProductBySlug(slug: string) {
