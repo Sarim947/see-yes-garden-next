@@ -2403,6 +2403,237 @@ export const doorProducts: DoorProduct[] = [
       },
     ],
   },
+{
+    slug: "steel-door-sed-c1207w",
+    title: "Steel Door SED-C1207W",
+    category: "Entry Door",
+    template: "door",
+    subtitle: "SED-C1207W for outdoor projects and wholesale supply.",
+    description: "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
+    image: "/images/products/entry-door/steel-door-sed-c1207w/product-card/card.webp",
+    gallery: [
+      "/images/products/entry-door/steel-door-sed-c1207w/detail-carousel/01-sed-c1207w-catalog-1600x1200.webp",
+      "/images/products/entry-door/steel-door-sed-c1207w/detail-carousel/02-sed-c1207w-detail-1600x1200.webp",
+      "/images/products/entry-door/steel-door-sed-c1207w/detail-carousel/03-sed-c1207w-hero-1600x1200.webp",
+      "/images/products/entry-door/steel-door-sed-c1207w/detail-carousel/04-sed-c1207w-hero2-1600x1200.webp",
+      "/images/products/entry-door/steel-door-sed-c1207w/detail-carousel/05-sed-c1207w-material-1600x1200.webp",
+    ],
+    highlights: [
+      "Galvanized Steel",
+      "205 x 95 x 12 cm",
+      "Carton",
+      "OEM & ODM support",
+    ],
+    applications: [
+      "Residential",
+      "Commercial",
+    ],
+    materials: [
+      "Galvanized Steel",
+      "Aluminum",
+    ],
+    customization: [
+      "Custom Size",
+      "Custom Color",
+      "Packaging",
+    ],
+    oemSupport: [
+      "Private Label",
+      "Packaging",
+      "Project Supply",
+    ],
+    cardModel: "SED-C1207W",
+    cardSize: "205 x 95 x 12 cm",
+    cardCbm: "0.3160 m³",
+    moq: "10",
+    grossWeight: "75",
+    netWeight: "70",
+    packing: "Carton",
+    status: "published",
+    productDescription: [
+      [
+        "Item Number",
+        "SED-C1207W",
+      ],
+      [
+        "Product Name",
+        "Steel Door SED-C1207W",
+      ],
+      [
+        "Material",
+        "Galvanized Steel / Aluminum",
+      ],
+      [
+        "Overall Size",
+        "205 x 95 x 12 cm or Customized",
+      ],
+      [
+        "Color",
+        "Customized",
+      ],
+      [
+        "Packing",
+        "Carton",
+      ],
+      [
+        "MOQ",
+        "10",
+      ],
+      [
+        "Gross Weight",
+        "75 kg",
+      ],
+      [
+        "Net Weight",
+        "70 kg",
+      ],
+      [
+        "CBM",
+        "0.3160 m³",
+      ],
+    ],
+    faqs: [
+      [
+        "Can I customize the size?",
+        "Yes. Send us your required length, width, height or technical drawing, and we can prepare a custom entry door plan.",
+      ],
+      [
+        "Can I choose the color and finish?",
+        "Yes. Color, surface finish and product details can be selected according to your market needs.",
+      ],
+      [
+        "Do you support OEM packaging?",
+        "Yes. We can support neutral packing, branded labels, instruction sheets, cartons and retail packaging for bulk orders.",
+      ],
+      [
+        "What information is needed for quotation?",
+        "Please provide size, quantity, destination country, material preference, finish color and any reference image or drawing.",
+      ],
+      [
+        "Can you supply for project orders?",
+        "Yes. We support retail, residential and project supply with production coordination, packing and export delivery.",
+      ],
+    ],
+    relatedProducts: [
+      {
+        title: "Steel Door SED-C1256W",
+        image: "/images/products/entry-door/sed-c1256w/product-card/card.webp",
+        slug: "sed-c1256w",
+      },
+      {
+        title: "Steel Door SED-C1256W",
+        image: "/images/products/entry-door/sed-c1256w/product-card/card.webp",
+        slug: "sed-c1256w",
+      },
+      {
+        title: "Aluminum Door SED-A-3633",
+        image: "/images/products/entry-door/aluminum-door-sed-a-3633/product-card/card.webp",
+        slug: "aluminum-door-sed-a-3633",
+      },
+    ],
+    cardImage: "/images/products/entry-door/steel-door-sed-c1207w/product-card/card.webp",
+    quickSpecs: [
+      [
+        "Model",
+        "SED-C1207W",
+      ],
+      [
+        "Size",
+        "205 x 95 x 12 cm",
+      ],
+      [
+        "Material",
+        "Galvanized Steel / Aluminum",
+      ],
+      [
+        "Surface Finish",
+        "Powder coating, wood grain or custom color",
+      ],
+      [
+        "Packing",
+        "Carton",
+      ],
+      [
+        "Project Supply",
+        "OEM packaging and bulk order support",
+      ],
+    ],
+    overview: "Factory direct entry door solutions for villas, apartments and project contractors, with options for size, color, handle, lock system, packaging and private label support.",
+    parameters: [
+      [
+        "Item Number",
+        "SED-C1207W",
+      ],
+      [
+        "Product Name",
+        "Steel Door SED-C1207W",
+      ],
+      [
+        "Material",
+        "Galvanized Steel / Aluminum",
+      ],
+      [
+        "Overall Size",
+        "205 x 95 x 12 cm or Customized",
+      ],
+      [
+        "Color",
+        "Customized",
+      ],
+      [
+        "Packing",
+        "Carton",
+      ],
+      [
+        "MOQ",
+        "10",
+      ],
+      [
+        "Gross Weight",
+        "75 kg",
+      ],
+      [
+        "Net Weight",
+        "70 kg",
+      ],
+      [
+        "CBM",
+        "0.3160 m³",
+      ],
+    ],
+    applicationScenes: [
+      {
+        title: "Office Workplace",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/01-office-workplace-scene.jpg",
+      },
+      {
+        title: "Luxury Villa",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/02-luxury-villa-scene.jpg",
+      },
+      {
+        title: "Luxury Apartment",
+        image: "/images/products/entry-door/pivot-door-SED-01/application-scenes/03-luxury-apartment-scene.jpg",
+      },
+    ],
+    factorySteps: [
+      {
+        title: "Workshop",
+        image: "/images/production-workshop.webp",
+      },
+      {
+        title: "Surface Treatment",
+        image: "/images/powder-coating.webp",
+      },
+      {
+        title: "Inspection",
+        image: "/images/quality-inspection.webp",
+      },
+      {
+        title: "Export Packing",
+        image: "/images/packing.webp",
+      },
+    ],
+  },
 ];
 
 export function getDoorProductBySlug(slug: string) {
