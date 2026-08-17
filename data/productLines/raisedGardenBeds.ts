@@ -332,133 +332,6 @@ export const raisedGardenBedProducts: ProductItem[] = [
     ],
   },
 {
-    slug: "raised-garden-bed-fgm-p8c8d-h82",
-    title: "Raised Garden Bed FGM-P8C8D-H82",
-    category: "Raised Garden Bed",
-    template: "standard",
-    subtitle: "FGM-P8C8D-H82 for outdoor projects and wholesale supply.",
-    description: "Factory direct raised garden bed solution for home gardens, retail channels and landscape projects, with options for size, color, panel style, carton packing and private label support.",
-    image: "/images/products/raised-garden-bed/raised-garden-bed-fgm-p8c8d-h82/product-card/card.jpg",
-    gallery: [
-      "/images/products/raised-garden-bed/raised-garden-bed-fgm-p8c8d-h82/detail-carousel/01-gaf00fd-p6c4j-h43-1600x1000-1.jpg",
-      "/images/products/raised-garden-bed/raised-garden-bed-fgm-p8c8d-h82/detail-carousel/02-gaf00fd-p6c4j-h43-1600x1000-2.jpg",
-      "/images/products/raised-garden-bed/raised-garden-bed-fgm-p8c8d-h82/detail-carousel/03-gaf00fd-p6c4j-h43-1600x1000-3.jpg",
-      "/images/products/raised-garden-bed/raised-garden-bed-fgm-p8c8d-h82/detail-carousel/04-gaf00fd-p6c4j-h43-1600x1000-4.jpg",
-    ],
-    highlights: [
-      "Galvanized Steel",
-      "300 x 65 x 80 cm",
-      "Carton",
-      "OEM & ODM support",
-    ],
-    applications: [
-      "Backyard & Garden",
-      "Residential",
-      "Public & Landscape",
-    ],
-    materials: [
-      "Galvanized Steel",
-    ],
-    customization: [
-      "Custom Size",
-      "Custom Color",
-      "Packaging",
-    ],
-    oemSupport: [
-      "Private Label",
-      "Packaging",
-    ],
-    cardModel: "FGM-P8C8D-H82",
-    cardSize: "300 x 65 x 80 cm",
-    cardCbm: "1.5600 m³",
-    moq: "100pcs",
-    grossWeight: "15",
-    netWeight: "13",
-    packing: "Carton",
-    status: "published",
-    productDescription: [
-      [
-        "Item Number",
-        "FGM-P8C8D-H82",
-      ],
-      [
-        "Product Name",
-        "Raised Garden Bed FGM-P8C8D-H82",
-      ],
-      [
-        "Material",
-        "Galvanized Steel",
-      ],
-      [
-        "Overall Size",
-        "300 x 65 x 80 cm or Customized",
-      ],
-      [
-        "Color",
-        "Customized",
-      ],
-      [
-        "Packing",
-        "Carton",
-      ],
-      [
-        "MOQ",
-        "100pcs",
-      ],
-      [
-        "Gross Weight",
-        "15 kg",
-      ],
-      [
-        "Net Weight",
-        "13 kg",
-      ],
-      [
-        "CBM",
-        "1.5600 m³",
-      ],
-    ],
-    faqs: [
-      [
-        "Can I customize the size?",
-        "Yes. Send us your required length, width, height or technical drawing, and we can prepare a custom raised garden bed plan.",
-      ],
-      [
-        "Can I choose the color and panel style?",
-        "Yes. Color, panel style, panel height and surface finish can be selected according to your market needs.",
-      ],
-      [
-        "Do you support OEM packaging?",
-        "Yes. We can support neutral packing, branded labels, instruction sheets, cartons and retail packaging for bulk orders.",
-      ],
-      [
-        "What information is needed for quotation?",
-        "Please provide size, quantity, destination country, material preference, finish color and any reference image or drawing.",
-      ],
-      [
-        "Can you supply for project orders?",
-        "Yes. We support retail, residential and landscape project supply with production coordination, packing and export delivery.",
-      ],
-    ],
-    relatedProducts: [
-      {
-        title: "Raised Garden Bed FC-C4C",
-        image: "/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/product-card/card.webp",
-        slug: "raised-garden-bed-fc-c4c",
-      },
-      {
-        title: "Raised Garden Bed FC-P4C4J",
-        image: "/images/products/raised-garden-bed/raised-garden-bed-fc-p4c4j/product-card/card.webp",
-        slug: "raised-garden-bed-fc-p4c4j",
-      },
-      {
-        title: "Raised Garden Bed FC-P4C4J",
-        image: "/images/products/raised-garden-bed/raised-garden-bed-fc-p4c4j/product-card/card.webp",
-        slug: "raised-garden-bed-fc-p4c4j",
-      },
-    ],
-  },
-{
     slug: "gcf02ft-p8r4j-h47",
     title: "Raised Garden Bed GCF02FT-P8R4J-H47",
     category: "Raised Garden Bed",
@@ -582,6 +455,132 @@ export const raisedGardenBedProducts: ProductItem[] = [
         title: "Raised Garden Bed FGM-P8C8D-H82",
         image: "/images/products/raised-garden-bed/raised-garden-bed-fgm-p8c8d-h82/product-card/card.jpg",
         slug: "raised-garden-bed-fgm-p8c8d-h82",
+      },
+    ],
+  },
+{
+    slug: "raised-garden-bed-fgm-p8c8d-h82",
+    title: "Raised Garden Bed FGM-P8C8D-H82",
+    category: "Raised Garden Bed",
+    template: "standard",
+    subtitle: "FGM-P8C8D-H82 for outdoor projects and wholesale supply.",
+    description: "Factory direct raised garden bed solution for home gardens, retail channels and landscape projects, with options for size, color, panel style, carton packing and private label support.",
+    image: "/images/products/raised-garden-bed/raised-garden-bed-fgm-p8c8d-h82/product-card/card.jpg",
+    gallery: [
+      "/images/products/raised-garden-bed/raised-garden-bed-fgm-p8c8d-h82/detail-carousel/01-fgm-p8c8d-h82-1600x1000-1.jpg",
+      "/images/products/raised-garden-bed/raised-garden-bed-fgm-p8c8d-h82/detail-carousel/02-fgm-p8c8d-h82-1600x1000-2.jpg",
+      "/images/products/raised-garden-bed/raised-garden-bed-fgm-p8c8d-h82/detail-carousel/03-fgm-p8c8d-h82-1600x1000-3.jpg",
+      "/images/products/raised-garden-bed/raised-garden-bed-fgm-p8c8d-h82/detail-carousel/04-fgm-p8c8d-h82-1600x1000-4.jpg",
+    ],
+    highlights: [
+      "Galvanized Steel",
+      "300 x 65 x 80 cm",
+      "Carton",
+      "OEM & ODM support",
+    ],
+    applications: [
+      "Backyard & Garden",
+      "Residential",
+      "Public & Landscape",
+    ],
+    materials: [
+      "Galvanized Steel",
+    ],
+    customization: [
+      "Custom Size",
+      "Custom Color",
+      "Packaging",
+    ],
+    oemSupport: [
+      "Private Label",
+      "Packaging",
+    ],
+    cardModel: "FGM-P8C8D-H82",
+    cardSize: "300 x 65 x 80 cm",
+    moq: "100pcs",
+    grossWeight: "15",
+    netWeight: "13",
+    packing: "Carton",
+    status: "published",
+    productDescription: [
+      [
+        "Item Number",
+        "FGM-P8C8D-H82",
+      ],
+      [
+        "Product Name",
+        "Raised Garden Bed FGM-P8C8D-H82",
+      ],
+      [
+        "Material",
+        "Galvanized Steel",
+      ],
+      [
+        "Overall Size",
+        "300 x 65 x 80 cm or Customized",
+      ],
+      [
+        "Color",
+        "Customized",
+      ],
+      [
+        "Packing",
+        "Carton",
+      ],
+      [
+        "MOQ",
+        "100pcs",
+      ],
+      [
+        "Gross Weight",
+        "15 kg",
+      ],
+      [
+        "Net Weight",
+        "13 kg",
+      ],
+      [
+        "CBM",
+        "1.5600 m³",
+      ],
+    ],
+    faqs: [
+      [
+        "Can I customize the size?",
+        "Yes. Send us your required length, width, height or technical drawing, and we can prepare a custom raised garden bed plan.",
+      ],
+      [
+        "Can I choose the color and panel style?",
+        "Yes. Color, panel style, panel height and surface finish can be selected according to your market needs.",
+      ],
+      [
+        "Do you support OEM packaging?",
+        "Yes. We can support neutral packing, branded labels, instruction sheets, cartons and retail packaging for bulk orders.",
+      ],
+      [
+        "What information is needed for quotation?",
+        "Please provide size, quantity, destination country, material preference, finish color and any reference image or drawing.",
+      ],
+      [
+        "Can you supply for project orders?",
+        "Yes. We support retail, residential and landscape project supply with production coordination, packing and export delivery.",
+      ],
+    ],
+    relatedProducts: [
+      {
+        title: "Raised Garden Bed FC-C4C",
+        image: "/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/product-card/card.webp",
+        slug: "raised-garden-bed-fc-c4c",
+      },
+      {
+        title: "Raised Garden Bed FC-P4C4J",
+        image: "/images/products/raised-garden-bed/raised-garden-bed-fc-p4c4j/product-card/card.webp",
+        slug: "raised-garden-bed-fc-p4c4j",
+      },
+      {
+        title: "Raised Garden Bed GCF02FT-P8R4J-H47",
+        image: "/images/products/raised-garden-bed/gcf02ft-p8r4j-h47/product-card/card.jpg",
+        slug: "gcf02ft-p8r4j-h47",
       },
     ],
   },
