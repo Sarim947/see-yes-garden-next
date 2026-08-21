@@ -84,7 +84,7 @@ export const pergolaProducts: ProductItem[] = [
     grossWeight: "65",
     netWeight: "43",
     packing: "Carton",
-    status: "published",
+    status: "deleted",
     productDescription: [
       [
         "Item Number",
