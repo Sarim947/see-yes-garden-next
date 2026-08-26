@@ -173,17 +173,18 @@ export const privacyScreenProducts: ProductItem[] = [
     category: "Metal Privacy Screen",
     template: "standard",
     subtitle: "GAP03D-L3F2 for outdoor projects and wholesale supply.",
-    description: "Factory direct Privacy Screen solution for home gardens, retail channels and landscape projects, with options for size, color, panel style, carton packing and private label support.",
+    description: "Factory direct privacy screen solution for home gardens, retail channels and landscape projects, with options for size, color, panel style, carton packing and private label support.",
     image: "/images/products/metal-privacy-screen/privacy-screen-gap03d-l3f2/product-card/card.webp",
     gallery: [
       "/images/products/metal-privacy-screen/privacy-screen-gap03d-l3f2/detail-carousel/01-ai-1.webp",
       "/images/products/metal-privacy-screen/privacy-screen-gap03d-l3f2/detail-carousel/02-ai-2.webp",
       "/images/products/metal-privacy-screen/privacy-screen-gap03d-l3f2/detail-carousel/03-ai-3.webp",
       "/images/products/metal-privacy-screen/privacy-screen-gap03d-l3f2/detail-carousel/04-ai-4.webp",
+      "/images/products/metal-privacy-screen/privacy-screen-gap03d-l3f2/detail-carousel/05-ai-5.webp",
     ],
     highlights: [
       "Galvanized Steel",
-      "120 x 50 x 182 cm",
+      "120 x 500 x 180 cm",
       "Carton",
       "OEM & ODM support",
     ],
@@ -206,12 +207,13 @@ export const privacyScreenProducts: ProductItem[] = [
       "Sample Development",
     ],
     cardModel: "GAP03D-L3F2",
-    cardSize: "120 x 50 x 182 cm",
-    moq: "100pcs",
-    grossWeight: "6.5",
-    netWeight: "5.5",
+    cardSize: "120 x 500 x 180 cm",
+    cardCbm: "0.0720 m³",
+    moq: "100",
+    grossWeight: "8.5",
+    netWeight: "7.5",
     packing: "Carton",
-    status: "deleted",
+    status: "published",
     productDescription: [
       [
         "Item Number",
@@ -227,7 +229,7 @@ export const privacyScreenProducts: ProductItem[] = [
       ],
       [
         "Overall Size",
-        "120 x 50 x 182 cm or Customized",
+        "120 x 500 x 180 cm or Customized",
       ],
       [
         "Color",
@@ -239,15 +241,15 @@ export const privacyScreenProducts: ProductItem[] = [
       ],
       [
         "MOQ",
-        "100pcs",
+        "100",
       ],
       [
         "Gross Weight",
-        "6.5 kg",
+        "8.5 kg",
       ],
       [
         "Net Weight",
-        "5.5 kg",
+        "7.5 kg",
       ],
       [
         "CBM",
