@@ -207,7 +207,6 @@ export const privacyScreenProducts: ProductItem[] = [
     ],
     cardModel: "GAP03D-L3F2",
     cardSize: "120 x 50 x 182 cm",
-    cardCbm: "0.0720 m³",
     moq: "100pcs",
     grossWeight: "6.5",
     netWeight: "5.5",
