@@ -211,7 +211,7 @@ export const privacyScreenProducts: ProductItem[] = [
     grossWeight: "6.5",
     netWeight: "5.5",
     packing: "Carton",
-    status: "published",
+    status: "deleted",
     productDescription: [
       [
         "Item Number",
