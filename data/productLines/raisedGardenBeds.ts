@@ -1851,4 +1851,132 @@ export const raisedGardenBedProducts: ProductItem[] = [
       },
     ],
   },
+{
+    slug: "raised-garden-bed-gab01sn-p4c4f1",
+    title: "Raised Garden Bed GAB01SN-P4C4F1",
+    category: "Raised Garden Bed",
+    template: "standard",
+    subtitle: "GAB01SN-P4C4F1 for outdoor projects and wholesale supply.",
+    description: "Factory direct raised garden bed solution for home gardens, retail channels and landscape projects, with options for size, color, panel style, carton packing and private label support.",
+    image: "/images/products/raised-garden-bed/raised-garden-bed-gab01sn-p4c4f1/product-card/card.webp",
+    gallery: [
+      "/images/products/raised-garden-bed/raised-garden-bed-gab01sn-p4c4f1/detail-carousel/01-ai-1.webp",
+      "/images/products/raised-garden-bed/raised-garden-bed-gab01sn-p4c4f1/detail-carousel/02-ai-2.webp",
+      "/images/products/raised-garden-bed/raised-garden-bed-gab01sn-p4c4f1/detail-carousel/03-ai-3.webp",
+      "/images/products/raised-garden-bed/raised-garden-bed-gab01sn-p4c4f1/detail-carousel/04-ai-4.webp",
+      "/images/products/raised-garden-bed/raised-garden-bed-gab01sn-p4c4f1/detail-carousel/05-ai-5.webp",
+    ],
+    highlights: [
+      "Galvanized Steel",
+      "1200 x 940 x 600 cm",
+      "Carton",
+      "OEM & ODM support",
+    ],
+    applications: [
+      "Backyard & Garden",
+      "Residential",
+      "Public & Landscape",
+    ],
+    materials: [
+      "Galvanized Steel",
+    ],
+    customization: [
+      "Custom Size",
+      "Custom Color",
+      "Packaging",
+    ],
+    oemSupport: [
+      "Private Label",
+      "Packaging",
+    ],
+    cardModel: "GAB01SN-P4C4F1",
+    cardSize: "1200 x 940 x 600 cm",
+    cardCbm: "0.0720 m³",
+    moq: "100",
+    grossWeight: "8.7",
+    netWeight: "7.7",
+    packing: "Carton",
+    status: "published",
+    productDescription: [
+      [
+        "Item Number",
+        "GAB01SN-P4C4F1",
+      ],
+      [
+        "Product Name",
+        "Raised Garden Bed GAB01SN-P4C4F1",
+      ],
+      [
+        "Material",
+        "Galvanized Steel",
+      ],
+      [
+        "Overall Size",
+        "1200 x 940 x 600 cm or Customized",
+      ],
+      [
+        "Color",
+        "Customized",
+      ],
+      [
+        "Packing",
+        "Carton",
+      ],
+      [
+        "MOQ",
+        "100",
+      ],
+      [
+        "Gross Weight",
+        "8.7 kg",
+      ],
+      [
+        "Net Weight",
+        "7.7 kg",
+      ],
+      [
+        "CBM",
+        "0.0720 m³",
+      ],
+    ],
+    faqs: [
+      [
+        "Can I customize the size?",
+        "Yes. Send us your required length, width, height or technical drawing, and we can prepare a custom raised garden bed plan.",
+      ],
+      [
+        "Can I choose the color and panel style?",
+        "Yes. Color, panel style, panel height and surface finish can be selected according to your market needs.",
+      ],
+      [
+        "Do you support OEM packaging?",
+        "Yes. We can support neutral packing, branded labels, instruction sheets, cartons and retail packaging for bulk orders.",
+      ],
+      [
+        "What information is needed for quotation?",
+        "Please provide size, quantity, destination country, material preference, finish color and any reference image or drawing.",
+      ],
+      [
+        "Can you supply for project orders?",
+        "Yes. We support retail, residential and landscape project supply with production coordination, packing and export delivery.",
+      ],
+    ],
+    relatedProducts: [
+      {
+        title: "Raised Garden Bed FC-C4C",
+        image: "/images/products/raised-garden-bed/raised-garden-bed-fc-c4c/product-card/card.webp",
+        slug: "raised-garden-bed-fc-c4c",
+      },
+      {
+        title: "Raised Garden Bed GCF02FT-P8R4J-H47",
+        image: "/images/products/raised-garden-bed/gcf02ft-p8r4j-h47/product-card/card.jpg",
+        slug: "gcf02ft-p8r4j-h47",
+      },
+      {
+        title: "Multi-Zone Corrugated Metal Raised Garden Bed GCF01FC-P12C8M2-H54",
+        image: "/images/products/raised-garden-bed/multi-zone-corrugated-metal-raised-garden-bed-gcf01fc-p12c8m2-h54/product-card/card.jpg",
+        slug: "multi-zone-corrugated-metal-raised-garden-bed-gcf01fc-p12c8m2-h54",
+      },
+    ],
+  },
 ];
