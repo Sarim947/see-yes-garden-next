@@ -2108,4 +2108,131 @@ export const raisedGardenBedProducts: ProductItem[] = [
       },
     ],
   },
+{
+    slug: "raised-garden-bed-gaf00xs-p4f1j",
+    title: "Raised Garden Bed GAF00XS-P4F1J",
+    category: "Raised Garden Bed",
+    template: "standard",
+    subtitle: "GAF00XS-P4F1J for outdoor projects and wholesale supply.",
+    description: "Factory direct raised garden bed solution for home gardens, retail channels and landscape projects, with options for size, color, panel style, carton packing and private label support.",
+    image: "/images/products/raised-garden-bed/raised-garden-bed-gaf00xs-p4f1j/product-card/card.webp",
+    gallery: [
+      "/images/products/raised-garden-bed/raised-garden-bed-gaf00xs-p4f1j/detail-carousel/01-ai-1.webp",
+      "/images/products/raised-garden-bed/raised-garden-bed-gaf00xs-p4f1j/detail-carousel/02-ai-2.webp",
+      "/images/products/raised-garden-bed/raised-garden-bed-gaf00xs-p4f1j/detail-carousel/03-ai-3.webp",
+      "/images/products/raised-garden-bed/raised-garden-bed-gaf00xs-p4f1j/detail-carousel/04-ai-4.webp",
+    ],
+    highlights: [
+      "Galvanized Steel",
+      "45 x 60 x 30 cm",
+      "Carton",
+      "OEM & ODM support",
+    ],
+    applications: [
+      "Backyard & Garden",
+      "Residential",
+      "Public & Landscape",
+    ],
+    materials: [
+      "Galvanized Steel",
+    ],
+    customization: [
+      "Custom Size",
+      "Custom Color",
+      "Packaging",
+    ],
+    oemSupport: [
+      "Private Label",
+      "Packaging",
+    ],
+    cardModel: "GAF00XS-P4F1J",
+    cardSize: "45 x 60 x 30 cm",
+    cardCbm: "0.0405 m³",
+    moq: "100pcs",
+    grossWeight: "9.5",
+    netWeight: "8.5",
+    packing: "Carton",
+    status: "published",
+    productDescription: [
+      [
+        "Item Number",
+        "GAF00XS-P4F1J",
+      ],
+      [
+        "Product Name",
+        "Raised Garden Bed GAF00XS-P4F1J",
+      ],
+      [
+        "Material",
+        "Galvanized Steel",
+      ],
+      [
+        "Overall Size",
+        "45 x 60 x 30 cm or Customized",
+      ],
+      [
+        "Color",
+        "Customized",
+      ],
+      [
+        "Packing",
+        "Carton",
+      ],
+      [
+        "MOQ",
+        "100pcs",
+      ],
+      [
+        "Gross Weight",
+        "9.5 kg",
+      ],
+      [
+        "Net Weight",
+        "8.5 kg",
+      ],
+      [
+        "CBM",
+        "0.0405 m³",
+      ],
+    ],
+    faqs: [
+      [
+        "Can I customize the size?",
+        "Yes. Send us your required length, width, height or technical drawing, and we can prepare a custom raised garden bed plan.",
+      ],
+      [
+        "Can I choose the color and panel style?",
+        "Yes. Color, panel style, panel height and surface finish can be selected according to your market needs.",
+      ],
+      [
+        "Do you support OEM packaging?",
+        "Yes. We can support neutral packing, branded labels, instruction sheets, cartons and retail packaging for bulk orders.",
+      ],
+      [
+        "What information is needed for quotation?",
+        "Please provide size, quantity, destination country, material preference, finish color and any reference image or drawing.",
+      ],
+      [
+        "Can you supply for project orders?",
+        "Yes. We support retail, residential and landscape project supply with production coordination, packing and export delivery.",
+      ],
+    ],
+    relatedProducts: [
+      {
+        title: "Hexagonal Corrugated Metal Raised Garden Bed GCF01FC-P5R5D-H30",
+        image: "/images/products/raised-garden-bed/hexagonal-corrugated-metal-raised-garden-bed-gcf01fc-p5r5d-h30/product-card/card.jpg",
+        slug: "hexagonal-corrugated-metal-raised-garden-bed-gcf01fc-p5r5d-h30",
+      },
+      {
+        title: "Curved Corrugated Metal Raised Garden Bed GCF01FC-P8C5R1L-H30",
+        image: "/images/products/raised-garden-bed/curved-corrugated-metal-raised-garden-bed-gcf01fc-p8c5r1l-h30/product-card/card.jpg",
+        slug: "curved-corrugated-metal-raised-garden-bed-gcf01fc-p8c5r1l-h30",
+      },
+      {
+        title: "U-Shaped Corrugated Metal Raised Garden Bed GCF01FC-P16C6R2U-H30",
+        image: "/images/products/raised-garden-bed/u-shaped-corrugated-metal-raised-garden-bed-gcf01fc-p16c6r2u-h30/product-card/card.jpg",
+        slug: "u-shaped-corrugated-metal-raised-garden-bed-gcf01fc-p16c6r2u-h30",
+      },
+    ],
+  },
 ];
